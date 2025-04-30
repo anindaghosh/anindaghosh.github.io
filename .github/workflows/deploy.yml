@@ -1,0 +1,59 @@
+# .github/workflows/deploy.yml
+
+name: Build and Deploy Portfolio
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push events but only for the 'main' branch
+  # !!! IMPORTANT: Change 'develop' to the branch containing your SOURCE CODE !!!
+  push:
+    branches: ['main'] # e.g., main, master, develop
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write # Allow workflow to write to the repository (push to main branch)
+  pages: write # Allow workflow to deploy to GitHub Pages (might be needed for newer methods, safe to include)
+  id-token: write # Allow workflow to use OIDC token (might be needed, safe to include)
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # Use the latest Ubuntu runner
+
+    steps:
+      # 1. Checkout the repository code from your SOURCE branch
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4 # Checks out your repository under $GITHUB_WORKSPACE
+
+      # 2. Setup Node.js environment
+      - name: Setup Node.js ⚙️
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use a specific LTS version or 'lts/*'
+          cache: 'npm' # Enable caching for npm dependencies
+
+      # 3. Install dependencies
+      - name: Install Dependencies 📦
+        run: npm install
+
+      # 4. Build the React application
+      - name: Build Application 🏗️
+        # !!! IMPORTANT: Change 'build' to 'dist' if using Vite !!!
+        run: |
+          npm run build
+          # Create a .nojekyll file to bypass Jekyll processing by GitHub Pages
+          touch dist/.nojekyll
+
+      # 5. Deploy the build output to the 'main' branch
+      - name: Deploy to main branch 🚀
+        uses: peaceiris/actions-gh-pages@v4 # Popular action for deploying to GH Pages
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Use the automatically generated token
+          publish_branch: main # Branch to deploy TO (for username.github.io, this MUST be main/master)
+          publish_dir: ./dist # Directory containing build artifacts (change to ./dist if using Vite)
+          force_orphan: true # Creates a clean history on the publish branch (optional but recommended)
+          # user_name: 'github-actions[bot]' # Optional: Customize commit user
+          # user_email: 'github-actions[bot]@users.noreply.github.com' # Optional: Customize commit email
+          # commit_message: 'Deploy portfolio build' # Optional: Customize commit message
