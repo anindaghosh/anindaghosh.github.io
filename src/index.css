@@ -1,153 +1,155 @@
-/* src/index.css - Example Basic Styles */
+/* src/index.css */
+
+/* Define light theme variables */
+:root {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --link-color: #007bff;
+  --secondary-text-color: #555555;
+  --footer-text-color: #888888;
+  --border-color: #007bff; /* For active nav link */
+  --toggle-bg: #eee;
+  --toggle-fg: #fff;
+  --toggle-icon-color: #333;
+}
+
+/* Define dark theme variables - applied when body has data-theme="dark" */
+body[data-theme='dark'] {
+  --background-color: #1a1a1a; /* Dark background */
+  --text-color: #e0e0e0;      /* Light text */
+  --link-color: #64b5f6;      /* Lighter blue for links */
+  --secondary-text-color: #aaaaaa;
+  --footer-text-color: #aaaaaa;
+  --border-color: #64b5f6;   /* Lighter border color */
+  --toggle-bg: #555;
+  --toggle-fg: #333;
+  --toggle-icon-color: #e0e0e0;
+}
+
+/* Apply variables to existing styles */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #fff; /* Or a very light grey */
+  /* Apply variables */
+  background-color: var(--background-color);
+  color: var(--text-color);
   margin: 0;
   padding: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
 .portfolio-container {
-  max-width: 800px; /* Adjust as needed */
-  margin: 40px auto; /* Center the content */
+  max-width: 800px;
+  margin: 40px auto;
   padding: 20px;
 }
 
-.portfolio-header h1 {
-  font-size: 2em;
-  margin-bottom: 30px;
-  display: flex; /* To align icon and text nicely if needed */
-  align-items: center;
-}
-
-.portfolio-header h1 span { /* Style for the waving hand */
-    margin-right: 10px;
-}
-
-.about-section {
-  margin-bottom: 40px;
-}
-
-.info-block {
+/* --- Header & Nav --- */
+.portfolio-header {
   display: flex;
-  align-items: flex-start; /* Align icon with the top of the text */
-  margin-bottom: 15px;
-}
-
-.info-icon {
-  margin-right: 10px;
-  font-size: 1.2em; /* Adjust icon size */
-  min-width: 25px; /* Ensure alignment */
-  text-align: center;
-}
-
-.info-block p {
-  margin: 0;
-  flex: 1; /* Allow text to take remaining space */
-}
-
-.links-section {
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 40px;
-  font-size: 0.9em;
+  flex-wrap: wrap;
 }
 
-.link-item {
-    margin-bottom: 8px;
+.header-title h1 {
+  font-size: 1.8em;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  /* Use variable */
+  color: var(--text-color);
+}
+.header-title h1 span {
+  margin-right: 10px;
 }
 
-.link-item span {
-    display: inline-block;
-    width: 80px; /* Adjust for alignment */
-    color: #555;
-}
 
-.link-item a {
-  color: #007bff; /* Or your preferred link color */
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center; /* Align toggle button with nav links */
+  gap: 20px;
+}
+.navbar li { display: inline-block; }
+
+.nav-link {
   text-decoration: none;
+  /* Use variable */
+  color: var(--secondary-text-color);
+  font-size: 1em;
+  padding: 5px 0;
+  transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+  border-bottom: 2px solid transparent;
 }
 
-.link-item a:hover {
-  text-decoration: underline;
+.nav-link:hover {
+  /* Use variable */
+  color: var(--link-color);
 }
 
+.nav-link.active {
+  /* Use variables */
+  color: var(--text-color);
+  font-weight: bold;
+  border-bottom: 2px solid var(--border-color);
+}
 
+/* --- About Section --- */
+.about-section { margin-bottom: 40px; }
+.info-block { display: flex; align-items: flex-start; margin-bottom: 15px; }
+.info-icon { margin-right: 10px; font-size: 1.2em; min-width: 25px; text-align: center; }
+.info-block p { margin: 0; flex: 1; color: var(--text-color); } /* Use variable */
+
+/* --- Links Section --- */
+.links-section { margin-bottom: 40px; font-size: 0.9em; }
+.link-item { margin-bottom: 8px; }
+.link-item span { display: inline-block; width: 80px; color: var(--secondary-text-color); } /* Use variable */
+.link-item a { color: var(--link-color); text-decoration: none; } /* Use variable */
+.link-item a:hover { text-decoration: underline; }
+
+/* --- Footer --- */
 .portfolio-footer {
   margin-top: 50px;
   text-align: center;
   font-size: 0.8em;
-  color: #888;
+  /* Use variable */
+  color: var(--footer-text-color);
 }
 
-.portfolio-header {
-  display: flex; /* Arrange title and nav side-by-side */
-  justify-content: space-between; /* Space them out */
-  align-items: center; /* Vertically align items */
-  margin-bottom: 40px; /* Add space below header */
-  flex-wrap: wrap; /* Allow wrapping on small screens if needed */
-}
-
-.header-title h1 {
-  font-size: 1.8em; /* Adjust size as needed */
-  margin: 0; /* Remove default margin */
+/* --- Theme Toggle Button --- */
+.theme-toggle-button {
+  background-color: var(--toggle-bg);
+  border: none;
+  color: var(--toggle-icon-color);
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%; /* Make it round */
+  font-size: 1.2em; /* Adjust icon size */
   display: flex;
   align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  margin-left: 10px; /* Space it from the last nav item */
 }
 
-.header-title h1 span {
-    margin-right: 10px;
+.theme-toggle-button:hover {
+  opacity: 0.8;
 }
 
 
-/* Navbar Styles */
-.navbar ul {
-  list-style: none; /* Remove bullet points */
-  padding: 0;
-  margin: 0;
-  display: flex; /* Arrange links horizontally */
-  gap: 20px; /* Space between links */
-}
-
-.navbar li {
-  display: inline-block; /* Ensure items sit side-by-side */
-}
-
-.nav-link {
-  text-decoration: none;
-  color: #555; /* Link color */
-  font-size: 1em;
-  padding: 5px 0; /* Add some vertical padding */
-  transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out; /* Smooth transition */
-  border-bottom: 2px solid transparent; /* Placeholder for active state */
-}
-
-.nav-link:hover {
-  color: #007bff; /* Link hover color */
-}
-
-/* Style for the active link */
-.nav-link.active {
-  color: #333; /* Active link color */
-  font-weight: bold;
-  border-bottom: 2px solid #007bff; /* Underline for active link */
-}
-
-/* Optional: Basic responsive adjustment for smaller screens */
+/* ... (Keep responsive styles, potentially adjust gaps/margins) ... */
 @media (max-width: 600px) {
   .portfolio-header {
-    flex-direction: column; /* Stack title and nav vertically */
-    align-items: flex-start; /* Align items to the start */
+    flex-direction: column;
+    align-items: flex-start;
   }
-
-  .navbar {
-    margin-top: 15px; /* Add space between title and nav when stacked */
-  }
-
-  .navbar ul {
-      gap: 15px; /* Reduce gap on smaller screens */
-  }
-   .nav-link {
-      font-size: 0.9em; /* Slightly smaller font */
-   }
+  .navbar { margin-top: 15px; width: 100%; /* Make navbar take full width */}
+  .navbar ul { gap: 15px; justify-content: space-between; /* Space out links and toggle */}
+   .nav-link { font-size: 0.9em; }
+   .theme-toggle-button { margin-left: 0; /* No extra margin needed when spaced out */}
 }
