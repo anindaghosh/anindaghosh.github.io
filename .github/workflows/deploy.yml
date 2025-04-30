@@ -33,6 +33,7 @@ jobs:
           # Optional: Specify pnpm version to match your local env
           # version: 8 # Or the specific version you use
           # If omitted, it uses the latest or the version in package.json's packageManager field
+          version: 10
           run_install: false # We'll run install manually in the next step
 
       # 3. Setup Node.js environment (still needed for the runner)
