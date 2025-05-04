@@ -28,9 +28,9 @@ function App() {
                   </>
                 }
               />
-              <Route path="/projects" element={<div>Projects Page Content Goes Here</div>} />
+              {/* <Route path="/projects" element={<div>Projects Page Content Goes Here</div>} />
               <Route path="/work" element={<div>Work Experience Content Goes Here</div>} />
-              <Route path="/education" element={<div>Education Content Goes Here</div>} />
+              <Route path="/education" element={<div>Education Content Goes Here</div>} /> */}
             </Routes>
           </main>
 
