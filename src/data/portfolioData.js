@@ -42,8 +42,8 @@ export const footerInfo = {
 export const navLinks = [
   // Assuming the main page "/" shows the "About" content
   { name: "About", path: "/" },
-  { name: "Projects", path: "/projects" },
-  { name: "Work", path: "/work" },
-  { name: "Education", path: "/education" },
+  // { name: "Projects", path: "/projects" },
+  // { name: "Work", path: "/work" },
+  // { name: "Education", path: "/education" },
   // Add other links as needed
 ];
