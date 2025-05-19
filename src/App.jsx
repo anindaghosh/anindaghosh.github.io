@@ -5,6 +5,7 @@ import Header from './components/Header';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
 import Links from './components/Links';
+import Education from './components/Education';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext'; // Import ThemeProvider
 import {
@@ -14,6 +15,7 @@ import {
   footerInfo,
   navLinks,
   skillsData,
+  educationData,
 } from './data/portfolioData';
 import './index.css';
 
@@ -31,15 +33,21 @@ function App() {
                 path="/"
                 element={
                   <>
-                    <AboutSection content={aboutContent} photo={personalInfo.photo} />
+                    <AboutSection
+                      content={aboutContent}
+                      photo={personalInfo.photo}
+                    />
                     <SkillsSection skills={skillsData} />
                     <Links links={contactLinks} />
                   </>
                 }
               />
               {/* <Route path="/projects" element={<div>Projects Page Content Goes Here</div>} />
-              <Route path="/work" element={<div>Work Experience Content Goes Here</div>} />
-              <Route path="/education" element={<div>Education Content Goes Here</div>} /> */}
+              <Route path="/work" element={<div>Work Experience Content Goes Here</div>} /> */}
+              <Route
+                path="/education"
+                element={<Education educationData={educationData} />}
+              />
             </Routes>
           </main>
 

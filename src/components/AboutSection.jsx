@@ -7,7 +7,11 @@ function AboutSection({ content, photo }) {
       <div className="about-header">
         {photo && (
           <div className="profile-photo-container">
-            <img src={photo} alt="Professional headshot" className="profile-photo" />
+            <img
+              src={photo}
+              alt="Professional headshot"
+              className="profile-photo"
+            />
           </div>
         )}
         <div className="about-content">

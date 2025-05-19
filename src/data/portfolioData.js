@@ -1,8 +1,8 @@
 // src/data/portfolioData.js
 
 export const personalInfo = {
-  name: 'Aninda Ghosh', 
-  photo: '/images/aninda.jpg'
+  name: 'Aninda Ghosh',
+  photo: '/images/aninda.jpg',
 };
 
 export const aboutContent = [
@@ -56,7 +56,7 @@ export const navLinks = [
   { name: 'About', path: '/' },
   // { name: "Projects", path: "/projects" },
   // { name: "Work", path: "/work" },
-  // { name: "Education", path: "/education" },
+  { name: 'Education', path: '/education' },
   // Add other links as needed
 ];
 
@@ -72,3 +72,48 @@ export const skillsData = [
   { name: 'PyTorch', level: 6 },
   { name: 'Flask', level: 7 },
 ];
+
+
+export const educationData = [
+  {
+    degree: "Master of Science in Computer Science",
+    institution: "New York University",
+    location: "New York, NY",
+    period: "2024 - 2026",
+    description: "Specialized in Artificial Intelligence and Machine Learning",
+    logo: "/images/nyu-logo.png", 
+    website: "https://engineering.nyu.edu/", // Add university website
+    achievements: [
+      "GPA: 3.9/4.0",
+      "Teaching Assistant for Introduction to Machine Learning",
+      "Research project on neural network optimization techniques"
+    ],
+    courses: [
+      "Deep Learning", 
+      "Natural Language Processing",
+      "Computer Vision", 
+      "Reinforcement Learning"
+    ]
+  },
+  {
+    degree: "Bachelor of Technology in Computer Science & Engineering",
+    institution: "SRM Institute of Science and Technology",
+    location: "Chennai, India",
+    period: "2017 - 2021",
+    description: "Focus on algorithms and data structures",
+    logo: "/images/srm-logo.png", 
+    website: "https://www.srmist.edu.in/",
+    achievements: [
+      "Graduated with honors",
+      "Recipient of Academic Excellence Award",
+      "Published paper on distributed systems"
+    ],
+    courses: [
+      "Data Structures", 
+      "Algorithms", 
+      "Database Systems",
+      "Operating Systems"
+    ]
+  }
+];
+
