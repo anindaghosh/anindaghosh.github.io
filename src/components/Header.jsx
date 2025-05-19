@@ -16,7 +16,9 @@ function Header({ name, links }) {
             <li key={link.name}>
               <NavLink
                 to={link.path}
-                className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+                className={({ isActive }) =>
+                  isActive ? 'nav-link active' : 'nav-link'
+                }
               >
                 {link.name}
               </NavLink>

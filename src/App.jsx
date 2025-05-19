@@ -3,10 +3,18 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import AboutSection from './components/AboutSection';
+import SkillsSection from './components/SkillsSection';
 import Links from './components/Links';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext'; // Import ThemeProvider
-import { personalInfo, aboutContent, contactLinks, footerInfo, navLinks } from './data/portfolioData';
+import {
+  personalInfo,
+  aboutContent,
+  contactLinks,
+  footerInfo,
+  navLinks,
+  skillsData,
+} from './data/portfolioData';
 import './index.css';
 
 function App() {
@@ -23,7 +31,8 @@ function App() {
                 path="/"
                 element={
                   <>
-                    <AboutSection content={aboutContent} />
+                    <AboutSection content={aboutContent} photo={personalInfo.photo} />
+                    <SkillsSection skills={skillsData} />
                     <Links links={contactLinks} />
                   </>
                 }
