@@ -4,9 +4,7 @@ import React from 'react';
 function Footer({ info }) {
   return (
     <footer className="portfolio-footer">
-      <p>
-        © {info.year} {info.name}
-      </p>
+      <p>{`© ${info.year} ${info.name} | ${info.tagline}`}</p>
     </footer>
   );
 }

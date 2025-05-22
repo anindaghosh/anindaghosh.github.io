@@ -4,8 +4,10 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
+import ProjectsSection from './components/ProjectsSection';
 import Links from './components/Links';
 import Education from './components/Education';
+import Resume from './components/Resume';
 import Footer from './components/Footer';
 import { ThemeProvider } from './context/ThemeContext'; // Import ThemeProvider
 import {
@@ -16,6 +18,8 @@ import {
   navLinks,
   skillsData,
   educationData,
+  projectsData,
+  resumeData,
 } from './data/portfolioData';
 import './index.css';
 
@@ -42,11 +46,18 @@ function App() {
                   </>
                 }
               />
-              {/* <Route path="/projects" element={<div>Projects Page Content Goes Here</div>} />
-              <Route path="/work" element={<div>Work Experience Content Goes Here</div>} /> */}
+              <Route
+                path="/projects"
+                element={<ProjectsSection projects={projectsData} />}
+              />
+              {/* <Route path="/work" element={<div>Work Experience Content Goes Here</div>} />  */}
               <Route
                 path="/education"
                 element={<Education educationData={educationData} />}
+              />
+              <Route
+                path="/resume"
+                element={<Resume resumeData={resumeData} />}
               />
             </Routes>
           </main>
