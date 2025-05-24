@@ -8,23 +8,23 @@ export const personalInfo = {
 export const aboutContent = [
   {
     icon: '📍',
-    text: "Currently a Master's student in Computer Science at NYU, passionate about cloud computing, AI, and system design.",
+    text: "Master's student in Computer Science at NYU Tandon. Focused on cloud computing, AI, and system design.",
   },
   {
     icon: '💼',
-    text: 'Former Solutions Architect at AB InBev, with experience designing scalable, cloud-native solutions in Finance, Logistics, and Employee Experience. Led teams on projects that resulted in cost savings and efficiency gains, including a global Net Promoter Score app with an NPS score of 88.',
+    text: 'Former Solutions Architect at AB InBev. Designed secure digital products on Azure for Finance, Supply Chain, and HR. Delivered over $1.8M in business savings through account reconciliation, asset verification, and workspace optimization.',
   },
   {
     icon: '🚀',
-    text: 'Looking to build on my experience in cloud computing and AI, aiming for roles in software engineering, AI/ML engineering, or security. Interested in contributing to innovative projects that leverage cutting-edge technologies.',
+    text: 'Targeting roles in software, ML, or cloud engineering. Keen to drive secure and scalable architectures in AI and compliance-focused ecosystems.',
   },
   {
     icon: '🎮',
-    text: "Enjoy coding, solving complex problems, and staying up-to-date with the latest in technology. Outside of work, I'm interested in machine learning, tech entrepreneurship, and exploring new AI trends.",
+    text: 'Enjoy building practical tools, exploring OWASP practices, and refining RAG pipelines. Passionate about AI agents, productivity tech, and cloud automation.',
   },
   {
     icon: '💡',
-    text: 'Proficient in Python, R, SQL, Django, and cloud technologies (AWS, Azure). Experienced with frameworks like React, Flask, and machine learning tools (TensorFlow, PyTorch). Strong background in data analysis, system architecture, and application security.',
+    text: 'Fluent in Python, SQL, JavaScript, Java. Skilled with Azure, AWS, Terraform, React, Flask, TensorFlow, PyTorch, and Tableau. Strong in SAST, DAST, SCA tools and ETL pipelines.',
   },
 ];
 
@@ -53,46 +53,73 @@ export const footerInfo = {
 };
 
 export const navLinks = [
-  // Assuming the main page "/" shows the "About" content
   { name: 'About', path: '/' },
-  // { name: "Work", path: "/work" },
+  { name: 'Work', path: '/work' },
   { name: 'Education', path: '/education' },
   { name: 'Projects', path: '/projects' },
   { name: 'Resume', path: '/resume' },
-  // Add other links as needed
 ];
 
 export const skillsData = [
-  { name: 'Python', level: 9 },
-  { name: 'R', level: 8 },
-  { name: 'SQL', level: 9 },
-  { name: 'Django', level: 7 },
-  { name: 'AWS', level: 8 },
-  { name: 'Azure', level: 8 },
-  { name: 'React', level: 7 },
-  { name: 'TensorFlow', level: 6 },
-  { name: 'PyTorch', level: 6 },
-  { name: 'Flask', level: 7 },
+  {
+    group: 'Core Languages',
+    skills: ['Python', 'JavaScript', 'Java', 'SQL'],
+  },
+  {
+    group: 'Web & Frameworks',
+    skills: ['React', 'Flask', 'Express.js', 'Django'],
+  },
+  {
+    group: 'Cloud & DevOps',
+    skills: [
+      'Microsoft Azure',
+      'AWS Cloud',
+      'Google Cloud',
+      'Terraform',
+      'Azure DevOps',
+    ],
+  },
+  {
+    group: 'Security Tools',
+    skills: ['Snyk', 'Checkmarx', 'SonarCloud', 'Apiiro'],
+  },
+  {
+    group: 'Data & Analytics',
+    skills: ['PostgreSQL', 'Mongo', 'PowerBI', 'Tableau'],
+  },
+  {
+    group: 'Machine Learning',
+    skills: ['Tensorflow', 'Keras', 'PyTorch'],
+  },
+  {
+    group: 'Testing & Monitoring',
+    skills: ['Pytest', 'Jest', 'Cypress', 'Locust', 'K6', 'Datadog'],
+  },
+  {
+    group: 'Design',
+    skills: ['Figma'],
+  },
 ];
 
 export const educationData = [
   {
     degree: 'Master of Science in Computer Science',
-    institution: 'New York University',
-    location: 'New York, NY',
+    institution: 'New York University - Tandon School of Engineering',
+    location: 'Brooklyn, NY',
     period: '2024 - 2026',
-    description: 'Specialized in Artificial Intelligence and Machine Learning',
+    description: 'Specialized in AI, ML, and Cloud Computing',
     logo: '/images/nyu-logo.png',
-    website: 'https://engineering.nyu.edu/', // Add university website
+    website: 'https://engineering.nyu.edu/',
     achievements: [
       'GPA: 3.9/4.0',
-      'Teaching Assistant for Introduction to Machine Learning',
-      'Research project on neural network optimization techniques',
+      'Graduate Assistant in Tableau-based reporting and automation',
+      'TA for Machine Learning course',
+      'BLEU 0.87 RAG system optimization for academic research',
     ],
     courses: [
       'Deep Learning',
       'Natural Language Processing',
-      'Computer Vision',
+      'Cloud Computing',
       'Reinforcement Learning',
     ],
   },
@@ -101,18 +128,18 @@ export const educationData = [
     institution: 'SRM Institute of Science and Technology',
     location: 'Chennai, India',
     period: '2017 - 2021',
-    description: 'Focus on algorithms and data structures',
+    description: 'Focused on systems engineering and robotics research',
     logo: '/images/srm-logo.png',
     website: 'https://www.srmist.edu.in/',
     achievements: [
-      'Graduated with honors',
-      'Recipient of Academic Excellence Award',
-      'Published paper on distributed systems',
+      'Graduated with Distinction (CGPA 9.02)',
+      'Academic Excellence Award recipient',
+      'Published paper on distributed systems and robotics using AprilTags',
     ],
     courses: [
-      'Data Structures',
       'Algorithms',
       'Database Systems',
+      'Distributed Systems',
       'Operating Systems',
     ],
   },
@@ -120,38 +147,105 @@ export const educationData = [
 
 export const projectsData = [
   {
-    title: 'AI-Powered Sentiment Analysis Dashboard',
+    title: 'Fine-Tuned Retrieval-Augmented Generation (RAG) System',
     description:
-      'A real-time sentiment analysis dashboard for social media monitoring, featuring custom NLP models and interactive visualizations.',
-    image: '/images/project-sentiment.jpg', // Add this image to your public/images folder
-    technologies: ['Python', 'React', 'TensorFlow', 'Flask', 'D3.js'],
-    githubUrl: 'https://github.com/anindaghosh/sentiment-analysis',
-    liveUrl: 'https://sentiment-dashboard.example.com',
+      'Built a performant document QA agent using LangChain, Qdrant, OpenAI, and FAISS. Improved BLEU to 0.87 and reduced latency by 25%.',
+    image: '/images/project-nyu-ai-rag.png',
+    technologies: ['Python', 'LangChain', 'OpenAI', 'Qdrant', 'FAISS'],
+    githubUrl:
+      'https://github.com/anindaghosh/cs-gy-6613-artificial-intelligence-project',
+    liveUrl: null,
   },
   {
-    title: 'Cloud-Native Microservices Framework',
+    title: "PC Makr - India's First PC Component Aggregator",
     description:
-      'A lightweight framework for building and deploying scalable microservices on Kubernetes with built-in observability tools.',
-    image: '/images/project-microservices.jpg', // Add this image to your public/images folder
-    technologies: ['Go', 'Kubernetes', 'Docker', 'Prometheus', 'gRPC'],
-    githubUrl: 'https://github.com/anindaghosh/microservices-framework',
-    liveUrl: 'https://docs.microframe.example.com',
+      'Aggregated 5000+ products across e-commerce sites. Attracted 4000 users. Deployed 80% accurate recommendation system.',
+    image: '/images/project-pcmakr.jpg',
+    technologies: ['React', 'Flask', 'PostgreSQL', 'Python'],
+    githubUrl: 'https://github.com/PCMakr/api',
+    liveUrl: null,
   },
   {
-    title: 'Secure Authentication Service',
+    title: 'Global NPS Application',
     description:
-      'A secure, standards-compliant authentication and authorization service supporting OAuth 2.0, OIDC, and FIDO2 WebAuthn.',
-    image: '/images/project-auth.jpg', // Add this image to your public/images folder
-    technologies: ['TypeScript', 'Node.js', 'PostgreSQL', 'Redis', 'JWT'],
-    githubUrl: 'https://github.com/anindaghosh/auth-service',
-    liveUrl: null, // No live demo available
+      'Designed and scaled a cross-market NPS tool. Reached score of 88 with 70% response rate. Recognized by Bain & Co.',
+    image: '/images/project-nps.jpg',
+    technologies: ['React', 'Node.js', 'Azure'],
+    githubUrl: 'https://github.com/anindaghosh/nps-platform',
+    liveUrl: null,
   },
 ];
 
 export const resumeData = {
   viewUrl:
     'https://drive.google.com/file/d/1xJ4-WAr3B8i8oEH9t6CEqQzdn9QbDWDb/view',
-  // You can leave this out if you want the download link to also go to the view URL
   downloadUrl:
     'https://drive.google.com/uc?export=download&id=1xJ4-WAr3B8i8oEH9t6CEqQzdn9QbDWDb',
 };
+
+export const workData = [
+  {
+    position: 'Graduate Assistant',
+    company: 'New York University',
+    location: 'New York, USA',
+    period: 'Sept 2024 - Present',
+    description:
+      'Assisting the Office of the Dean in automating Tableau-based data reporting for academic performance and strategic planning.',
+    logo: '/images/nyu-logo.png',
+    website: 'https://engineering.nyu.edu',
+    achievements: [
+      'Optimized multi-department reporting pipelines.',
+      'Created interactive dashboards for institutional research.',
+    ],
+    technologies: ['Tableau', 'Python', 'SQL'],
+  },
+  {
+    position: 'Solutions Architect',
+    company: 'AB InBev',
+    location: 'Bengaluru, India',
+    period: 'Jul 2020 - Jul 2024',
+    description:
+      'Led cross-functional squads to design and deploy Azure-based digital solutions across Finance, Logistics, and Employee Experience domains.',
+    logo: '/images/ab-inbev-logo.jpg',
+    website: 'https://www.ab-inbev.com',
+    achievements: [
+      'Saved $1.8M+ through secure, scalable app design for reconciliation, asset management, and workspace digitization.',
+      'Security Champion enforcing SAST, DAST, SCA tools like Snyk, Checkmarx, and Apiiro.',
+      'Automated CI/CD with Terraform for efficient and secure Azure deployment.',
+      'Built and deployed the global NPS tool (88 NPS score, 70% response rate).',
+    ],
+    technologies: [
+      'Azure',
+      'Terraform',
+      'React',
+      'Node.js',
+      'PostgreSQL',
+      'Flask',
+      'Python',
+    ],
+  },
+  {
+    position: 'Deep Learning Intern',
+    company: 'VNaad Technologies',
+    location: 'Bengaluru, India',
+    period: 'May 2019 - Jun 2019',
+    description:
+      'Developed a face recognition system on a single-board computer using live video processing to detect and identify human faces.',
+    logo: '/images/vnaad-logo.jpg',
+    website: '',
+    achievements: [],
+    technologies: ['Python', 'OpenCV', 'Raspberry Pi'],
+  },
+  {
+    position: 'Software Developer Intern',
+    company: 'Justdial',
+    location: 'Bengaluru, India',
+    period: 'Jun 2018 - Jul 2018',
+    description:
+      'Built a prototype home assistant using Python, JavaScript, and MQTT on Raspberry Pi. Integrated Justdial search bot backend and developed image classifier with CNNs.',
+    logo: '/images/justdial-logo.jpg',
+    website: '',
+    achievements: [],
+    technologies: ['Python', 'JavaScript', 'Node.js', 'MQTT', 'Raspberry Pi'],
+  },
+];
