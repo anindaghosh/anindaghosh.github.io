@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   FaPython,
   FaReact,
@@ -35,6 +35,20 @@ import {
 import { VscAzure, VscAzureDevops } from 'react-icons/vsc';
 
 function SkillsSection({ skills }) {
+  const [hoveredSkill, setHoveredSkill] = useState(null);
+
+  // Define category colors
+  const categoryColors = {
+    'Core Languages': '#e74c3c',
+    'Web & Frameworks': '#3498db',
+    'Cloud & DevOps': '#b5f312',
+    'Security Tools': '#9b59b6',
+    'Data & Analytics': '#27ae60',
+    'Machine Learning': '#e67e22',
+    'Testing & Monitoring': '#34495e',
+    Design: '#f1c40f',
+  };
+
   const getSkillIcon = (skillName) => {
     const iconMap = {
       // Core Languages
@@ -52,9 +66,9 @@ function SkillsSection({ skills }) {
       // Cloud & DevOps
       'Microsoft Azure': <VscAzure />,
       'AWS Cloud': <FaAws />,
+      'Google Cloud': <SiGooglecloud />,
       Terraform: <SiTerraform />,
       'Azure DevOps': <VscAzureDevops />,
-      'Google Cloud': <SiGooglecloud />,
 
       // Security Tools
       Snyk: <SiSnyk />,
@@ -85,7 +99,7 @@ function SkillsSection({ skills }) {
       Figma: <SiFigma />,
     };
 
-    return iconMap[skillName] || <FaCode />; // Default icon if not found
+    return iconMap[skillName] || <FaCode />;
   };
 
   return (
@@ -95,20 +109,47 @@ function SkillsSection({ skills }) {
         Skills
       </h2>
 
-      <div className="skills-groups-container">
-        {skills.map((skillGroup, groupIndex) => (
-          <div key={groupIndex} className="skill-group">
-            <h3 className="skill-group-title">{skillGroup.group}</h3>
-            <div className="skills-container">
-              {skillGroup.skills.map((skill, skillIndex) => (
-                <div key={skillIndex} className="skill-pill">
-                  <span className="skill-icon">{getSkillIcon(skill)}</span>
-                  <span className="skill-name">{skill}</span>
-                </div>
-              ))}
-            </div>
+      {/* Category Legend */}
+      <div className="skills-legend">
+        {Object.entries(categoryColors).map(([category, color]) => (
+          <div key={category} className="legend-item">
+            <div
+              className="legend-color"
+              style={{ backgroundColor: color }}
+            ></div>
+            <span className="legend-text">{category}</span>
           </div>
         ))}
+      </div>
+
+      {/* Skills Matrix */}
+      <div className="skills-matrix">
+        {skills.map((skillGroup) =>
+          skillGroup.skills.map((skill, skillIndex) => (
+            <div
+              key={`${skillGroup.group}-${skillIndex}`}
+              className="skill-icon-container"
+              style={{
+                '--category-color':
+                  categoryColors[skillGroup.group] || '#95a5a6',
+              }}
+              onMouseEnter={() =>
+                setHoveredSkill({ skill, category: skillGroup.group })
+              }
+              onMouseLeave={() => setHoveredSkill(null)}
+            >
+              <div className="skill-icon-wrapper">{getSkillIcon(skill)}</div>
+
+              {/* Tooltip */}
+              {hoveredSkill?.skill === skill && (
+                <div className="skill-tooltip">
+                  <div className="tooltip-skill">{skill}</div>
+                  <div className="tooltip-category">{skillGroup.group}</div>
+                </div>
+              )}
+            </div>
+          )),
+        )}
       </div>
     </section>
   );

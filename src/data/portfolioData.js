@@ -107,20 +107,16 @@ export const educationData = [
     institution: 'New York University - Tandon School of Engineering',
     location: 'Brooklyn, NY',
     period: '2024 - 2026',
-    description: 'Specialized in AI, ML, and Cloud Computing',
+    description: 'Specializing in AI, Security and Cloud Computing',
     logo: '/images/nyu-logo.png',
     website: 'https://engineering.nyu.edu/',
-    achievements: [
-      'GPA: 3.9/4.0',
-      'Graduate Assistant in Tableau-based reporting and automation',
-      'TA for Machine Learning course',
-      'BLEU 0.87 RAG system optimization for academic research',
-    ],
+    achievements: [],
     courses: [
-      'Deep Learning',
-      'Natural Language Processing',
+      'Artificial Intelligence',
       'Cloud Computing',
-      'Reinforcement Learning',
+      'Human Computer Interaction',
+      'Information, Security & Privacy',
+      'Software Engineering',
     ],
   },
   {
@@ -132,20 +128,45 @@ export const educationData = [
     logo: '/images/srm-logo.png',
     website: 'https://www.srmist.edu.in/',
     achievements: [
-      'Graduated with Distinction (CGPA 9.02)',
-      'Academic Excellence Award recipient',
+      'Graduated First Class with Distinction (CGPA 9.02)',
       'Published paper on distributed systems and robotics using AprilTags',
     ],
     courses: [
-      'Algorithms',
-      'Database Systems',
-      'Distributed Systems',
+      'Algorithm Design and Analysis',
+      'Database Management Systems',
+      'Artificial Intelligence',
+      'Data Science and Big Data Analytics',
       'Operating Systems',
     ],
   },
 ];
 
 export const projectsData = [
+  {
+    title: 'CareVault',
+    description:
+      'A secure healthcare management platform for patients and caregivers to organize medical documents, schedule appointments, and track medications. Features an AI assistant for querying documents and deriving health insights. Supports multi-profile management for caregivers.',
+    image: '/images/project-carevault.png',
+    technologies: [
+      'Flask',
+      'Supabase',
+      'PostgreSQL',
+      'RAGFlow',
+      'React',
+      'Docker',
+    ],
+    githubUrl: null,
+    liveUrl: 'https://youtu.be/ZuuEdnYPFfQ',
+  },
+  {
+    title: 'AI-Powered Vulnerability Detector',
+    description:
+      'Built a cloud-based web app that scans Python-based GitHub repos for security vulnerabilities using Bandit and LLaMA 3B. The tool provides CWE-tagged issues with AI-generated fix suggestions.',
+    image: '/images/project-vulnscanner.jpg',
+    technologies: ['Flask', 'Supabase', 'AWS', 'Bandit', 'LLaMA 3B', 'React'],
+    githubUrl: 'https://github.com/CS-GY-9223-Cloud-Vuln-Detector/backend',
+    liveUrl: 'https://main.d3k1a8dkhmpya0.amplifyapp.com/',
+  },
   {
     title: 'Fine-Tuned Retrieval-Augmented Generation (RAG) System',
     description:
@@ -165,15 +186,6 @@ export const projectsData = [
     githubUrl: 'https://github.com/PCMakr/api',
     liveUrl: null,
   },
-  {
-    title: 'Global NPS Application',
-    description:
-      'Designed and scaled a cross-market NPS tool. Reached score of 88 with 70% response rate. Recognized by Bain & Co.',
-    image: '/images/project-nps.jpg',
-    technologies: ['React', 'Node.js', 'Azure'],
-    githubUrl: 'https://github.com/anindaghosh/nps-platform',
-    liveUrl: null,
-  },
 ];
 
 export const resumeData = {
@@ -184,21 +196,6 @@ export const resumeData = {
 };
 
 export const workData = [
-  {
-    position: 'Graduate Assistant',
-    company: 'New York University',
-    location: 'New York, USA',
-    period: 'Sept 2024 - Present',
-    description:
-      'Assisting the Office of the Dean in automating Tableau-based data reporting for academic performance and strategic planning.',
-    logo: '/images/nyu-logo.png',
-    website: 'https://engineering.nyu.edu',
-    achievements: [
-      'Optimized multi-department reporting pipelines.',
-      'Created interactive dashboards for institutional research.',
-    ],
-    technologies: ['Tableau', 'Python', 'SQL'],
-  },
   {
     position: 'Solutions Architect',
     company: 'AB InBev',
@@ -223,6 +220,21 @@ export const workData = [
       'Flask',
       'Python',
     ],
+  },
+  {
+    position: 'Graduate Assistant',
+    company: 'New York University',
+    location: 'New York, USA',
+    period: 'Sept 2024 - Present',
+    description:
+      'Assisting the Office of the Dean in automating Tableau-based data reporting for academic performance and strategic planning.',
+    logo: '/images/nyu-logo.png',
+    website: 'https://engineering.nyu.edu',
+    achievements: [
+      'Optimized multi-department reporting pipelines.',
+      'Created interactive dashboards for institutional research.',
+    ],
+    technologies: ['Tableau', 'Python', 'SQL'],
   },
   {
     position: 'Deep Learning Intern',
