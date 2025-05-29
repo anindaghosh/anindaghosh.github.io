@@ -8,23 +8,19 @@ export const personalInfo = {
 export const aboutContent = [
   {
     icon: '📍',
-    text: "Master's student in Computer Science at NYU Tandon. Focused on cloud computing, AI, and system design.",
+    text: 'CS Master’s student at NYU Tandon, focused on cloud systems, AI infrastructure, and scalable backend design.',
   },
   {
     icon: '💼',
-    text: 'Former Solutions Architect at AB InBev. Designed secure digital products on Azure for Finance, Supply Chain, and HR. Delivered over $1.8M in business savings through account reconciliation, asset verification, and workspace optimization.',
+    text: 'Ex-Solutions Architect at AB InBev. Delivered $1.8M+ in value through secure Azure apps across Finance, Logistics, and HR.',
   },
   {
     icon: '🚀',
-    text: 'Targeting roles in software, ML, or cloud engineering. Keen to drive secure and scalable architectures in AI and compliance-focused ecosystems.',
+    text: 'Seeking roles in backend, ML, or platform engineering. Strong interest in AI workflows, DevSecOps, and compliance-ready architectures.',
   },
   {
     icon: '🎮',
-    text: 'Enjoy building practical tools, exploring OWASP practices, and refining RAG pipelines. Passionate about AI agents, productivity tech, and cloud automation.',
-  },
-  {
-    icon: '💡',
-    text: 'Fluent in Python, SQL, JavaScript, Java. Skilled with Azure, AWS, Terraform, React, Flask, TensorFlow, PyTorch, and Tableau. Strong in SAST, DAST, SCA tools and ETL pipelines.',
+    text: 'Explores application security, software engineering principles, and the latest in AI. Big fan of Formula 1, Batman, clean APIs, and fast dev cycles.',
   },
 ];
 
@@ -166,6 +162,24 @@ export const projectsData = [
     technologies: ['Flask', 'Supabase', 'AWS', 'Bandit', 'LLaMA 3B', 'React'],
     githubUrl: 'https://github.com/CS-GY-9223-Cloud-Vuln-Detector/backend',
     liveUrl: 'https://main.d3k1a8dkhmpya0.amplifyapp.com/',
+  },
+  {
+    title: 'RoomScout - Student Housing Platform',
+    description:
+      'End-to-end web app for international students to find verified housing near NYC schools. Features property listings, advanced filters, student verification, and GPT-powered amenity insights.',
+    image: '/images/project-roomscout.jpg',
+    technologies: [
+      'React',
+      'Django',
+      'PostgreSQL',
+      'OpenAI API',
+      'Figma',
+      'Jest',
+      'Pytest',
+      'Locust',
+    ],
+    githubUrl: 'https://github.com/anindaghosh/roomscout',
+    liveUrl: null,
   },
   {
     title: 'Fine-Tuned Retrieval-Augmented Generation (RAG) System',
