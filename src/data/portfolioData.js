@@ -8,7 +8,7 @@ export const personalInfo = {
 export const aboutContent = [
   {
     icon: '📍',
-    text: 'CS Master’s student at NYU Tandon, focused on cloud systems, AI infrastructure, and scalable backend design.',
+    text: "CS Master's student at NYU Tandon, focused on cloud systems, AI infrastructure, and scalable backend design.",
   },
   {
     icon: '💼',
@@ -20,7 +20,7 @@ export const aboutContent = [
   },
   {
     icon: '🎮',
-    text: 'Explores application security, software engineering principles, and the latest in AI. Big fan of Formula 1, Batman, clean APIs, and fast dev cycles.',
+    text: 'Explores application security, software engineering principles, and the latest in AI. Huge Formula 1 fan.',
   },
 ];
 
@@ -167,7 +167,7 @@ export const projectsData = [
     title: 'RoomScout - Student Housing Platform',
     description:
       'End-to-end web app for international students to find verified housing near NYC schools. Features property listings, advanced filters, student verification, and GPT-powered amenity insights.',
-    image: '/images/project-roomscout.jpg',
+    image: '/images/project-roomscout.png',
     technologies: [
       'React',
       'Django',
