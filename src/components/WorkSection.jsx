@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import {
   FaExternalLinkAlt,
   FaBriefcase,
@@ -8,7 +9,22 @@ import {
 
 function WorkSection({ workData }) {
   return (
-    <section id="work" className="work-section">
+    <>
+      <Helmet>
+        <title>Work Experience | Aninda Ghosh</title>
+        <meta
+          name="description"
+          content="Professional experience as Solutions Architect at AB InBev, Software Engineer at Persistent Systems, and internships at Juniper Networks. Expertise in cloud engineering, full-stack development, and DevOps."
+        />
+        <meta property="og:title" content="Work Experience | Aninda Ghosh" />
+        <meta
+          property="og:description"
+          content="Professional experience in cloud engineering, full-stack development, and secure application architecture."
+        />
+        <meta property="og:url" content="https://www.anindaghosh.com/work" />
+        <link rel="canonical" href="https://www.anindaghosh.com/work" />
+      </Helmet>
+      <section id="work" className="work-section">
       <h2 className="section-title">
         <span className="section-icon">🧑🏻‍💻</span>
         Work Experience
@@ -86,6 +102,7 @@ function WorkSection({ workData }) {
         ))}
       </div>
     </section>
+    </>
   );
 }
 

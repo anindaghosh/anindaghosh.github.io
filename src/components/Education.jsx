@@ -1,9 +1,25 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FaExternalLinkAlt, FaGraduationCap } from 'react-icons/fa';
 
 function Education({ educationData }) {
   return (
-    <section id="education" className="education-section">
+    <>
+      <Helmet>
+        <title>Education | Aninda Ghosh</title>
+        <meta
+          name="description"
+          content="Educational background: MS in Computer Engineering from NYU Tandon School of Engineering (2023-2025) and B.Tech in Computer Science from VIT Vellore (2016-2020)."
+        />
+        <meta property="og:title" content="Education | Aninda Ghosh" />
+        <meta
+          property="og:description"
+          content="MS in Computer Engineering from NYU Tandon, specialized in cloud computing, AI/ML, and software engineering."
+        />
+        <meta property="og:url" content="https://www.anindaghosh.com/education" />
+        <link rel="canonical" href="https://www.anindaghosh.com/education" />
+      </Helmet>
+      <section id="education" className="education-section">
       <h2 className="section-title">
         <span className="section-icon">🎓</span>
         Education
@@ -77,6 +93,7 @@ function Education({ educationData }) {
         ))}
       </div>
     </section>
+    </>
   );
 }
 

@@ -16,6 +16,13 @@ const routesToPrerender = ['/', '/projects', '/work', '/education', '/resume'];
 (async () => {
   for (const url of routesToPrerender) {
     const rendered = render(url);
+    
+    // Debug: Check what we're getting from helmet
+    console.log(`\nRendering ${url}:`)
+    console.log('Head content length:', rendered.head?.length || 0);
+    if (rendered.head) {
+      console.log('First 200 chars of head:', rendered.head.substring(0, 200));
+    }
 
     const html = template
       .replace(`<!--app-head-->`, rendered.head ?? '')

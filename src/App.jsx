@@ -1,6 +1,7 @@
 // src/App.js
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
@@ -27,10 +28,10 @@ import './index.css';
 
 function App() {
   return (
-    // Wrap with ThemeProvider
-    <ThemeProvider>
-      <div className="portfolio-container">
-        <Header name={personalInfo.name} links={navLinks} />
+    <HelmetProvider>
+      <ThemeProvider>
+        <div className="portfolio-container">
+          <Header name={personalInfo.name} links={navLinks} />
 
           <main>
             <Routes>
@@ -68,7 +69,8 @@ function App() {
 
         <Footer info={footerInfo} />
       </div>
-    </ThemeProvider> // Close ThemeProvider
+      </ThemeProvider>
+    </HelmetProvider>
   );
 }
 
