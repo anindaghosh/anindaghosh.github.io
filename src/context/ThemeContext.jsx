@@ -9,6 +9,10 @@ export const ThemeProvider = ({ children }) => {
   // State to hold the current theme ('light' or 'dark')
   // Initialize state from localStorage or default to 'light'
   const [theme, setTheme] = useState(() => {
+    // Check if we're in a browser environment
+    if (typeof window === 'undefined') {
+      return 'light'; // Default theme for SSR
+    }
     const savedTheme = localStorage.getItem('theme');
     // You could also check system preference here if needed:
     // const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -22,6 +26,9 @@ export const ThemeProvider = ({ children }) => {
 
   // Effect to update the body attribute and localStorage when theme changes
   useEffect(() => {
+    // Only run in browser environment
+    if (typeof window === 'undefined') return;
+    
     // Set the data-theme attribute on the body
     document.body.setAttribute('data-theme', theme);
     // Save the theme preference to localStorage

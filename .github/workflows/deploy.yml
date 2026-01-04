@@ -53,11 +53,11 @@ jobs:
       - name: Build Application 🏗️
         # !!! IMPORTANT: Change 'build' to 'dist' if using Vite !!!
         run: |
-          pnpm run build
+          pnpm generate
           # Create a .nojekyll file
-          touch dist/.nojekyll
+          touch dist/client/.nojekyll
           # Adding custom domain
-          echo "www.anindaghosh.com" > dist/CNAME
+          echo "www.anindaghosh.com" > dist/client/CNAME
 
       # 6. Deploy the build output to the 'main' branch (remains the same)
       - name: Deploy to main branch 🚀
@@ -65,7 +65,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: main
-          publish_dir: ./dist # Change to ./dist if using Vite
+          publish_dir: ./dist/client # Change to ./dist if using Vite
           force_orphan: true
           cname: www.anindaghosh.com
           # user_name: 'github-actions[bot]' # Optional

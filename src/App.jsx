@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
@@ -27,11 +27,10 @@ import './index.css';
 
 function App() {
   return (
-    // Wrap BrowserRouter with ThemeProvider
+    // Wrap with ThemeProvider
     <ThemeProvider>
-      <HashRouter>
-        <div className="portfolio-container">
-          <Header name={personalInfo.name} links={navLinks} />
+      <div className="portfolio-container">
+        <Header name={personalInfo.name} links={navLinks} />
 
           <main>
             <Routes>
@@ -64,12 +63,11 @@ function App() {
                 path="/resume"
                 element={<Resume resumeData={resumeData} />}
               />
-            </Routes>
-          </main>
+          </Routes>
+        </main>
 
-          <Footer info={footerInfo} />
-        </div>
-      </HashRouter>
+        <Footer info={footerInfo} />
+      </div>
     </ThemeProvider> // Close ThemeProvider
   );
 }
