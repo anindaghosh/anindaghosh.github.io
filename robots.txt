@@ -1,0 +1,12 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow crawling of assets (optional, usually not needed)
+Disallow: /assets/
+
+# Sitemap location
+Sitemap: https://www.anindaghosh.com/sitemap.xml
+
+# Crawl delay (optional, can help with server load)
+Crawl-delay: 1
