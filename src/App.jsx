@@ -1,6 +1,6 @@
 // src/App.js
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router';
 import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import AboutSection from './components/AboutSection';

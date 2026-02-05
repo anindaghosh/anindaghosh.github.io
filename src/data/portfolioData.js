@@ -173,7 +173,6 @@ export const projectsData = [
     paperUrl: null, // Add if you have a published paper or report
     courseInfo: 'NYU Tandon School of Engineering - Trust & Safety Engineering'
   },
-  { title: 'Minto', },
   {
     title: 'CareVault',
     description:

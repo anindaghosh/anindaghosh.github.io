@@ -1,6 +1,6 @@
 // src/components/Header.js
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router';
 import ThemeToggleButton from './ThemeToggleButton'; // Import the toggle button
 
 function Header({ name, links }) {

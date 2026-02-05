@@ -1,7 +1,8 @@
 import { StrictMode } from 'react';
 import { renderToString } from 'react-dom/server';
-import { StaticRouter } from 'react-router-dom';
+import { StaticRouter } from 'react-router';
 import { HelmetProvider } from 'react-helmet-async';
+import './index.css';
 import App from './App.jsx';
 
 export function render(url) {
