@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaFileAlt } from 'react-icons/fa';
 
 const ProjectsSection = ({ projects }) => {
   return (
@@ -38,7 +38,35 @@ const ProjectsSection = ({ projects }) => {
             <div className="project-content">
               <h3 className="project-title">{project.title}</h3>
 
+              {project.courseInfo && (
+                <div className="course-badge">{project.courseInfo}</div>
+              )}
+
               <p className="project-description">{project.description}</p>
+
+              {project.metrics && (
+                <div className="project-metrics">
+                  {Object.entries(project.metrics).map(([key, value]) => (
+                    <div key={key} className="metric-item">
+                      <span className="metric-label">
+                        {key.replace(/([A-Z])/g, ' $1').trim()}:
+                      </span>
+                      <span className="metric-value">{value}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {project.features && (
+                <details className="project-features">
+                  <summary>Key Features</summary>
+                  <ul>
+                    {project.features.map((feature, i) => (
+                      <li key={i}>{feature}</li>
+                    ))}
+                  </ul>
+                </details>
+              )}
 
               {project.technologies && (
                 <div className="project-technologies">
@@ -72,6 +100,18 @@ const ProjectsSection = ({ projects }) => {
                   >
                     <FaExternalLinkAlt />
                     <span>Live Demo</span>
+                  </a>
+                )}
+
+                {project.paperUrl && (
+                  <a
+                    href={project.paperUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link paper-link"
+                  >
+                    <FaFileAlt />
+                    <span>Paper</span>
                   </a>
                 )}
               </div>

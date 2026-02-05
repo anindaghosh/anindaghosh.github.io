@@ -7,20 +7,20 @@ export const personalInfo = {
 
 export const aboutContent = [
   {
-    icon: '📍',
-    text: "CS Master's student at NYU Tandon, focused on cloud systems, AI infrastructure, and scalable backend design.",
+    icon: '🎓',
+    text: "CS Master's student at NYU Tandon (May 2026). Published Trust & Safety research on cryptocurrency scam detection achieving 62.2% precision across 358 validated YouTube videos.",
   },
   {
     icon: '💼',
-    text: 'Ex-Solutions Architect at AB InBev. Delivered $1.8M+ in value through secure Azure apps across Finance, Logistics, and HR.',
+    text: 'Prev Solutions Architect at AB InBev (4 years). Built financial reconciliation systems processing 150M+ daily records, hybrid work platform serving 5K employees (100% adoption), and Sales automation across 13 European countries.',
   },
   {
-    icon: '🚀',
-    text: 'Seeking roles in backend, ML, or platform engineering. Strong interest in AI workflows, DevSecOps, and compliance-ready architectures.',
+    icon: '🔒',
+    text: 'Security Champion with 73% vulnerability reduction across 25+ applications. Azure-certified architect specializing in secure cloud infrastructure, DevSecOps pipelines, and enterprise compliance.',
   },
   {
     icon: '🎮',
-    text: 'Explores application security, software engineering principles, and the latest in AI. Huge Formula 1 fan.',
+    text: 'AI/ML researcher exploring adversarial detection, RAG systems, and platform safety. Huge Formula 1 fan and aspiring Dark Knight coder.',
   },
 ];
 
@@ -106,10 +106,12 @@ export const educationData = [
     description: 'Specializing in AI, Security and Cloud Computing',
     logo: '/images/nyu-logo.png',
     website: 'https://engineering.nyu.edu/',
-    achievements: [],
+    achievements: ['Graduate Assistant - Tableau data automation for academic performance reporting',],
     courses: [
       'Artificial Intelligence',
       'Cloud Computing',
+      'Trust & Safety',
+      'Data Science & AI for Business - Stern School of Business',
       'Human Computer Interaction',
       'Information, Security & Privacy',
       'Software Engineering',
@@ -138,6 +140,40 @@ export const educationData = [
 ];
 
 export const projectsData = [
+  {
+    title: 'Streamjacking Detector: Cryptocurrency Scam Detection on YouTube',
+    description:
+      'Machine learning-based detection system for identifying hijacked YouTube livestreams promoting cryptocurrency scams. Analyzes video metadata, channel information, and live chat patterns to classify fraudulent streams. Evaluated on 358 manually validated videos, achieving 62.2% precision, 95.5% specificity, and sub-second inference latency. Open-source research project that received the highest score in NYU Trust & Safety Engineering course.',
+    image: '/images/project-streamjacking.png',
+    technologies: [
+      'Python',
+      'YouTube Data API v3',
+      'scikit-learn',
+      'Pandas',
+      'Matplotlib',
+      'Seaborn',
+      'NLTK',
+      'Regular Expressions'
+    ],
+    features: [
+      'Automated detection of hijacked livestreams',
+      'Multi-feature analysis (metadata, channel stats, chat patterns)',
+      'Binary classification with multiple ML models',
+      'Real-time detection with sub-second latency',
+      'Comprehensive evaluation with confusion matrices and performance metrics'
+    ],
+    metrics: {
+      precision: '62.2%',
+      specificity: '95.5%',
+      datasetSize: 358,
+      inferenceLatency: '< 1 second'
+    },
+    githubUrl: 'https://github.com/anindaghosh/trustsafety-streamjacking-detector',
+    liveUrl: null,
+    paperUrl: null, // Add if you have a published paper or report
+    courseInfo: 'NYU Tandon School of Engineering - Trust & Safety Engineering'
+  },
+  { title: 'Minto', },
   {
     title: 'CareVault',
     description:
@@ -261,17 +297,5 @@ export const workData = [
     website: '',
     achievements: [],
     technologies: ['Python', 'OpenCV', 'Raspberry Pi'],
-  },
-  {
-    position: 'Software Developer Intern',
-    company: 'Justdial',
-    location: 'Bengaluru, India',
-    period: 'Jun 2018 - Jul 2018',
-    description:
-      'Built a prototype home assistant using Python, JavaScript, and MQTT on Raspberry Pi. Integrated Justdial search bot backend and developed image classifier with CNNs.',
-    logo: '/images/justdial-logo.jpg',
-    website: '',
-    achievements: [],
-    technologies: ['Python', 'JavaScript', 'Node.js', 'MQTT', 'Raspberry Pi'],
   },
 ];
