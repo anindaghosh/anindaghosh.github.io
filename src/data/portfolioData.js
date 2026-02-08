@@ -8,7 +8,7 @@ export const personalInfo = {
 export const aboutContent = [
   {
     icon: '🎓',
-    text: "CS Master's student at NYU Tandon (May 2026). Published Trust & Safety research on cryptocurrency scam detection achieving 62.2% precision across 358 validated YouTube videos.",
+    text: "CS Master's student at NYU Tandon (May 2026) focusing on AI/ML, Cloud Computing, Big Data, Software Engineering and Security.",
   },
   {
     icon: '💼',
@@ -256,8 +256,8 @@ export const workData = [
     website: 'https://www.ab-inbev.com',
     achievements: [
       'Account Reconciliation Platform: Architected system processing 150M+ daily financial records across 6 regions with multi-currency support, reducing API response time from 2 minutes to <1 second with ACID guarantees.',
-      'Global NPS Platform (KRIA): Designed and deployed enterprise feedback system achieving 88 NPS score and 70% response rate across all business units with real-time analytics dashboards.',
-      'Fixed Assets Verification (AMI): Led digitization of 700K physical assets across North American zone, delivering $500K in tax savings with 2-week turnaround and automated audit workflows.',
+      'Global NPS Platform: Designed and deployed enterprise feedback system achieving 88 NPS score and 70% response rate across all business units with real-time analytics dashboards.',
+      'Fixed Assets Verification: Led digitization of 700K physical assets across North American zone, delivering $500K in tax savings with 2-week turnaround and automated audit workflows.',
       'Security Champion: Reduced vulnerabilities by 73% across 25+ applications serving 7,000+ users through Azure Key Vault adoption, JWT authentication, and CI/CD security tooling (Snyk, SonarCloud, Apiiro).',
       'Enterprise Architecture: Established Azure Landing Zone patterns, Terraform IaC standards, and secure API gateway architectures adopted across Digital Solutions organization.',
     ],
@@ -270,6 +270,8 @@ export const workData = [
       'Python',
       'Node.js',
       'Azure DevOps',
+      'SAP BAPIs',
+      'Salesforce Connected Apps',
     ],
   },
   {
@@ -282,8 +284,8 @@ export const workData = [
     logo: '/images/ab-inbev-logo.jpg',
     website: 'https://www.ab-inbev.com',
     achievements: [
-      'Hybrid Work Platform (Hop-A-Seat): Built end-to-end workspace management PWA serving 5,000 employees with 100% adoption rate, 1,000+ daily bookings, replacing $120K/year vendor. Integrated thermal scanner APIs (Web Serial), government health verification, and transport booking systems.',
-      'European Sales Automation (Maven): Developed customer master data platform for 2,000+ sales reps across 13 countries, reducing turnaround from 3 days to <1 day and improving accuracy from 40% to 95%. Implemented country-specific IBAN/VAT validation, SAP ECC integration, and Salesforce Connected Apps.',
+      'Hybrid Work Platform: Built end-to-end workspace management PWA serving 5,000 employees with 100% adoption rate, 1,000+ daily bookings, replacing $120K/year vendor. Integrated thermal scanner APIs (Web Serial), government health verification, and transport booking systems.',
+      'European Sales Automation: Developed customer master data platform for 2,000+ sales reps across 13 countries, reducing turnaround from 3 days to <1 day and improving accuracy from 40% to 95%. Implemented country-specific IBAN/VAT validation, SAP ECC integration, and Salesforce Connected Apps.',
       'COVID Tracker: Deployed employee health monitoring system during pandemic, enabling HR team to track vaccination status and provide rapid assistance to 5,000+ employees with automated notifications.',
       'Platform Ownership: Maintained 8+ production applications with 99.5%+ uptime, managed Azure infrastructure, and implemented monitoring via Application Insights and Azure Monitor.',
     ],
