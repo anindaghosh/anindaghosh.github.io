@@ -7,24 +7,20 @@ export const personalInfo = {
 
 export const aboutContent = [
   {
-    icon: '📍',
-    text: "Currently a Master's student in Computer Science at NYU, passionate about cloud computing, AI, and system design.",
+    icon: '🎓',
+    text: "CS Master's student at NYU Tandon (May 2026) focusing on AI/ML, Cloud Computing, Big Data, Software Engineering and Security.",
   },
   {
     icon: '💼',
-    text: 'Former Solutions Architect at AB InBev, with experience designing scalable, cloud-native solutions in Finance, Logistics, and Employee Experience. Led teams on projects that resulted in cost savings and efficiency gains, including a global Net Promoter Score app with an NPS score of 88.',
+    text: 'Prev Solutions Architect at AB InBev (4 years). Built financial reconciliation systems processing 150M+ daily records, hybrid work platform serving 5K employees (100% adoption), and Sales automation across 13 European countries.',
   },
   {
-    icon: '🚀',
-    text: 'Looking to build on my experience in cloud computing and AI, aiming for roles in software engineering, AI/ML engineering, or security. Interested in contributing to innovative projects that leverage cutting-edge technologies.',
+    icon: '🔒',
+    text: 'Security Champion with 73% vulnerability reduction across 25+ applications. Azure-certified architect specializing in secure cloud infrastructure, DevSecOps pipelines, and enterprise compliance.',
   },
   {
     icon: '🎮',
-    text: "Enjoy coding, solving complex problems, and staying up-to-date with the latest in technology. Outside of work, I'm interested in machine learning, tech entrepreneurship, and exploring new AI trends.",
-  },
-  {
-    icon: '💡',
-    text: 'Proficient in Python, R, SQL, Django, and cloud technologies (AWS, Azure). Experienced with frameworks like React, Flask, and machine learning tools (TensorFlow, PyTorch). Strong background in data analysis, system architecture, and application security.',
+    text: 'AI/ML researcher exploring adversarial detection, RAG systems, and platform safety. Huge Formula 1 fan and aspiring Dark Knight coder.',
   },
 ];
 
@@ -53,47 +49,72 @@ export const footerInfo = {
 };
 
 export const navLinks = [
-  // Assuming the main page "/" shows the "About" content
   { name: 'About', path: '/' },
   { name: 'Work', path: '/work' },
   { name: 'Education', path: '/education' },
   { name: 'Projects', path: '/projects' },
   { name: 'Resume', path: '/resume' },
-  // Add other links as needed
 ];
 
 export const skillsData = [
-  { name: 'Python', level: 9 },
-  { name: 'R', level: 8 },
-  { name: 'SQL', level: 9 },
-  { name: 'Django', level: 7 },
-  { name: 'AWS', level: 8 },
-  { name: 'Azure', level: 8 },
-  { name: 'React', level: 7 },
-  { name: 'TensorFlow', level: 6 },
-  { name: 'PyTorch', level: 6 },
-  { name: 'Flask', level: 7 },
+  {
+    group: 'Core Languages',
+    skills: ['Python', 'JavaScript', 'Java', 'SQL'],
+  },
+  {
+    group: 'Web & Frameworks',
+    skills: ['React', 'Flask', 'Express.js', 'Django'],
+  },
+  {
+    group: 'Cloud & DevOps',
+    skills: [
+      'Microsoft Azure',
+      'AWS Cloud',
+      'Google Cloud',
+      'Terraform',
+      'Azure DevOps',
+    ],
+  },
+  {
+    group: 'Security Tools',
+    skills: ['Snyk', 'Checkmarx', 'SonarCloud', 'Apiiro'],
+  },
+  {
+    group: 'Data & Analytics',
+    skills: ['PostgreSQL', 'Mongo', 'PowerBI', 'Tableau'],
+  },
+  {
+    group: 'Machine Learning',
+    skills: ['Tensorflow', 'Keras', 'PyTorch'],
+  },
+  {
+    group: 'Testing & Monitoring',
+    skills: ['Pytest', 'Jest', 'Cypress', 'Locust', 'K6', 'Datadog'],
+  },
+  {
+    group: 'Design',
+    skills: ['Figma'],
+  },
 ];
 
 export const educationData = [
   {
     degree: 'Master of Science in Computer Science',
-    institution: 'New York University',
-    location: 'New York, NY',
+    institution: 'New York University - Tandon School of Engineering',
+    location: 'Brooklyn, NY',
     period: '2024 - 2026',
-    description: 'Specialized in Artificial Intelligence and Machine Learning',
+    description: 'Specializing in AI, Security and Cloud Computing',
     logo: '/images/nyu-logo.png',
-    website: 'https://engineering.nyu.edu/', // Add university website
-    achievements: [
-      'GPA: 3.9/4.0',
-      'Teaching Assistant for Introduction to Machine Learning',
-      'Research project on neural network optimization techniques',
-    ],
+    website: 'https://engineering.nyu.edu/',
+    achievements: ['Graduate Assistant - Tableau data automation for academic performance reporting',],
     courses: [
-      'Deep Learning',
-      'Natural Language Processing',
-      'Computer Vision',
-      'Reinforcement Learning',
+      'Artificial Intelligence',
+      'Cloud Computing',
+      'Trust & Safety',
+      'Data Science & AI for Business - Stern School of Business',
+      'Human Computer Interaction',
+      'Information, Security & Privacy',
+      'Software Engineering',
     ],
   },
   {
@@ -101,18 +122,18 @@ export const educationData = [
     institution: 'SRM Institute of Science and Technology',
     location: 'Chennai, India',
     period: '2017 - 2021',
-    description: 'Focus on algorithms and data structures',
+    description: 'Focused on systems engineering and robotics research',
     logo: '/images/srm-logo.png',
     website: 'https://www.srmist.edu.in/',
     achievements: [
-      'Graduated with honors',
-      'Recipient of Academic Excellence Award',
-      'Published paper on distributed systems',
+      'Graduated First Class with Distinction (CGPA 9.02)',
+      'Published paper on distributed systems and robotics using AprilTags',
     ],
     courses: [
-      'Data Structures',
-      'Algorithms',
-      'Database Systems',
+      'Algorithm Design and Analysis',
+      'Database Management Systems',
+      'Artificial Intelligence',
+      'Data Science and Big Data Analytics',
       'Operating Systems',
     ],
   },
@@ -120,37 +141,214 @@ export const educationData = [
 
 export const projectsData = [
   {
-    title: 'AI-Powered Sentiment Analysis Dashboard',
+    title: 'Streamjacking Detector: Cryptocurrency Scam Detection on YouTube',
     description:
-      'A real-time sentiment analysis dashboard for social media monitoring, featuring custom NLP models and interactive visualizations.',
-    image: '/images/project-sentiment.jpg', // Add this image to your public/images folder
-    technologies: ['Python', 'React', 'TensorFlow', 'Flask', 'D3.js'],
-    githubUrl: 'https://github.com/anindaghosh/sentiment-analysis',
-    liveUrl: 'https://sentiment-dashboard.example.com',
+      'Machine learning-based detection system for identifying hijacked YouTube livestreams promoting cryptocurrency scams. Analyzes video metadata, channel information, and live chat patterns to classify fraudulent streams. Evaluated on 358 manually validated videos, achieving 62.2% precision, 95.5% specificity, and sub-second inference latency. Open-source research project that received the highest score in NYU Trust & Safety Engineering course.',
+    image: '/images/project-streamjacking.png',
+    technologies: [
+      'Python',
+      'YouTube Data API v3',
+      'scikit-learn',
+      'Pandas',
+      'Matplotlib',
+      'Seaborn',
+      'NLTK',
+      'Regular Expressions'
+    ],
+    features: [
+      'Automated detection of hijacked livestreams',
+      'Multi-feature analysis (metadata, channel stats, chat patterns)',
+      'Binary classification with multiple ML models',
+      'Real-time detection with sub-second latency',
+      'Comprehensive evaluation with confusion matrices and performance metrics'
+    ],
+    metrics: {
+      precision: '62.2%',
+      specificity: '95.5%',
+      datasetSize: 358,
+      inferenceLatency: '< 1 second'
+    },
+    githubUrl: 'https://github.com/anindaghosh/trustsafety-streamjacking-detector',
+    liveUrl: null,
+    paperUrl: null, // Add if you have a published paper or report
+    courseInfo: 'NYU Tandon School of Engineering - Trust & Safety Engineering'
   },
   {
-    title: 'Cloud-Native Microservices Framework',
+    title: 'CareVault',
     description:
-      'A lightweight framework for building and deploying scalable microservices on Kubernetes with built-in observability tools.',
-    image: '/images/project-microservices.jpg', // Add this image to your public/images folder
-    technologies: ['Go', 'Kubernetes', 'Docker', 'Prometheus', 'gRPC'],
-    githubUrl: 'https://github.com/anindaghosh/microservices-framework',
-    liveUrl: 'https://docs.microframe.example.com',
+      'A secure healthcare management platform for patients and caregivers to organize medical documents, schedule appointments, and track medications. Features an AI assistant for querying documents and deriving health insights. Supports multi-profile management for caregivers.',
+    image: '/images/project-carevault.png',
+    technologies: [
+      'Flask',
+      'Supabase',
+      'PostgreSQL',
+      'RAGFlow',
+      'React',
+      'Docker',
+    ],
+    githubUrl: null,
+    liveUrl: 'https://youtu.be/ZuuEdnYPFfQ',
   },
   {
-    title: 'Secure Authentication Service',
+    title: 'AI-Powered Vulnerability Detector',
     description:
-      'A secure, standards-compliant authentication and authorization service supporting OAuth 2.0, OIDC, and FIDO2 WebAuthn.',
-    image: '/images/project-auth.jpg', // Add this image to your public/images folder
-    technologies: ['TypeScript', 'Node.js', 'PostgreSQL', 'Redis', 'JWT'],
-    githubUrl: 'https://github.com/anindaghosh/auth-service',
-    liveUrl: null, // No live demo available
+      'Built a cloud-based web app that scans Python-based GitHub repos for security vulnerabilities using Bandit and LLaMA 3B. The tool provides CWE-tagged issues with AI-generated fix suggestions.',
+    image: '/images/project-vulnscanner.jpg',
+    technologies: ['Flask', 'Supabase', 'AWS', 'Bandit', 'LLaMA 3B', 'React'],
+    githubUrl: 'https://github.com/CS-GY-9223-Cloud-Vuln-Detector/backend',
+    liveUrl: 'https://main.d3k1a8dkhmpya0.amplifyapp.com/',
+  },
+  {
+    title: 'RoomScout - Student Housing Platform',
+    description:
+      'End-to-end web app for international students to find verified housing near NYC schools. Features property listings, advanced filters, student verification, and GPT-powered amenity insights.',
+    image: '/images/project-roomscout.png',
+    technologies: [
+      'React',
+      'Django',
+      'PostgreSQL',
+      'OpenAI API',
+      'Figma',
+      'Jest',
+      'Pytest',
+      'Locust',
+    ],
+    githubUrl: 'https://github.com/anindaghosh/roomscout',
+    liveUrl: null,
+  },
+  {
+    title: 'Fine-Tuned Retrieval-Augmented Generation (RAG) System',
+    description:
+      'Built a performant document QA agent using LangChain, Qdrant, OpenAI, and FAISS. Improved BLEU to 0.87 and reduced latency by 25%.',
+    image: '/images/project-nyu-ai-rag.png',
+    technologies: ['Python', 'LangChain', 'OpenAI', 'Qdrant', 'FAISS'],
+    githubUrl:
+      'https://github.com/anindaghosh/cs-gy-6613-artificial-intelligence-project',
+    liveUrl: null,
+  },
+  {
+    title: "PC Makr - India's First PC Component Aggregator",
+    description:
+      'Aggregated 5000+ products across e-commerce sites. Attracted 4000 users. Deployed 80% accurate recommendation system.',
+    image: '/images/project-pcmakr.jpg',
+    technologies: ['React', 'Flask', 'PostgreSQL', 'Python'],
+    githubUrl: 'https://github.com/PCMakr/api',
+    liveUrl: null,
   },
 ];
 
 export const resumeData = {
   viewUrl:
-    'https://drive.google.com/file/d/1xJ4-WAr3B8i8oEH9t6CEqQzdn9QbDWDb/view',
+    'https://drive.google.com/file/d/15H551MT5BBuzjlTFXDNopv4TsZQHWSNP/view',
   downloadUrl:
-    'https://drive.google.com/uc?export=download&id=1xJ4-WAr3B8i8oEH9t6CEqQzdn9QbDWDb',
+    'https://drive.google.com/uc?export=download&id=15H551MT5BBuzjlTFXDNopv4TsZQHWSNP',
 };
+
+export const workData = [
+  {
+    position: 'Solutions Architect',
+    company: 'AB InBev',
+    location: 'Bengaluru, India',
+    period: 'Jan 2023 - Jul 2024',
+    description:
+      'Led enterprise architecture for critical business applications across Finance, Operations, and Employee Experience. Designed secure, scalable Azure solutions serving 7,000+ users across 5 global regions.',
+    logo: '/images/ab-inbev-logo.jpg',
+    website: 'https://www.ab-inbev.com',
+    achievements: [
+      'Account Reconciliation Platform: Architected system processing 150M+ daily financial records across 6 regions with multi-currency support, reducing API response time from 2 minutes to <1 second with ACID guarantees.',
+      'Global NPS Platform: Designed and deployed enterprise feedback system achieving 88 NPS score and 70% response rate across all business units with real-time analytics dashboards.',
+      'Fixed Assets Verification: Led digitization of 700K physical assets across North American zone, delivering $500K in tax savings with 2-week turnaround and automated audit workflows.',
+      'Security Champion: Reduced vulnerabilities by 73% across 25+ applications serving 7,000+ users through Azure Key Vault adoption, JWT authentication, and CI/CD security tooling (Snyk, SonarCloud, Apiiro).',
+      'Enterprise Architecture: Established Azure Landing Zone patterns, Terraform IaC standards, and secure API gateway architectures adopted across Digital Solutions organization.',
+    ],
+    technologies: [
+      'Azure',
+      'Terraform',
+      'PostgreSQL',
+      'React',
+      'Flask',
+      'Python',
+      'Node.js',
+      'Azure DevOps',
+      'SAP BAPIs',
+      'Salesforce Connected Apps',
+    ],
+  },
+  {
+    position: 'Software Development Engineer I',
+    company: 'AB InBev',
+    location: 'Bengaluru, India',
+    period: 'Jul 2021 - Dec 2022',
+    description:
+      'Built full-stack enterprise applications for workforce management and sales operations. Delivered customer-embedded solutions across Europe and India requiring stakeholder collaboration across 13+ countries.',
+    logo: '/images/ab-inbev-logo.jpg',
+    website: 'https://www.ab-inbev.com',
+    achievements: [
+      'Hybrid Work Platform: Built end-to-end workspace management PWA serving 5,000 employees with 100% adoption rate, 1,000+ daily bookings, replacing $120K/year vendor. Integrated thermal scanner APIs (Web Serial), government health verification, and transport booking systems.',
+      'European Sales Automation: Developed customer master data platform for 2,000+ sales reps across 13 countries, reducing turnaround from 3 days to <1 day and improving accuracy from 40% to 95%. Implemented country-specific IBAN/VAT validation, SAP ECC integration, and Salesforce Connected Apps.',
+      'COVID Tracker: Deployed employee health monitoring system during pandemic, enabling HR team to track vaccination status and provide rapid assistance to 5,000+ employees with automated notifications.',
+      'Platform Ownership: Maintained 8+ production applications with 99.5%+ uptime, managed Azure infrastructure, and implemented monitoring via Application Insights and Azure Monitor.',
+    ],
+    technologies: [
+      'React',
+      'Python',
+      'Flask',
+      'PostgreSQL',
+      'Azure App Service',
+      'Azure Functions',
+      'REST APIs',
+      'SAP Integration',
+    ],
+  },
+  {
+  position: 'Graduate Assistant',
+  company: 'New York University',
+  location: 'New York, USA',
+  period: 'Sep 2024 - Present',
+  description:
+    'Engineering data platforms and analytics infrastructure for the Office of the Dean. Building React/FastAPI applications serving 8,000+ students and 500+ faculty with course feedback analysis, dashboard consolidation, and institutional research automation.',
+  logo: '/images/nyu-logo.png',
+  website: 'https://engineering.nyu.edu',
+  achievements: [
+    'SeEval Course Feedback Platform: Built with React, D3.js, FastAPI, and AWS (Amplify, EC2, RDS, Redis) serving 8,000+ students. Implemented read-optimized architecture with pre-aggregated target tables and Redis caching achieving <500ms API response times for historical course feedback, sentiment analysis, and comparative visualizations.',
+    'Tableau Dashboards Directory: Developed React/FastAPI portal consumed by 500+ faculty with automated metadata extraction via Python Lambda functions calling Tableau REST APIs. Consolidated 100+ dashboards with three-layer navigation, reducing manual maintenance by 60%.',
+    'Enterprise SSO Integration: Implemented Microsoft Entra authentication across both platforms, enabling seamless single sign-on for students and faculty.',
+    'Performance Optimization: Designed read-optimized database architecture with pre-aggregated target tables, achieving sub-500ms response times for complex analytical queries across large historical datasets.',
+  ],
+  technologies: [
+    'React',
+    'FastAPI',
+    'D3.js',
+    'AWS (Amplify, EC2, RDS, Lambda)',
+    'PostgreSQL',
+    'Redis',
+    'Tableau REST API',
+    'Microsoft Entra ID',
+    'Python',
+  ],
+},
+  {
+    position: 'Deep Learning Intern',
+    company: 'VNaad Technologies',
+    location: 'Bengaluru, India',
+    period: 'May 2019 - Jun 2019',
+    description:
+      'Developed a face recognition system on a single-board computer using live video processing to detect and identify human faces.',
+    logo: '/images/vnaad-logo.jpg',
+    website: '',
+    achievements: [],
+    technologies: ['Python', 'OpenCV', 'Raspberry Pi'],
+  },
+  {
+    position: 'Software Developer Intern',
+    company: 'Justdial',
+    location: 'Bengaluru, India',
+    period: 'Jun 2018 - Jul 2018',
+    description:
+      'Built a prototype home assistant using Python, JavaScript, and MQTT on Raspberry Pi. Integrated Justdial search bot backend and developed image classifier with CNNs.',
+    logo: '/images/justdial-logo.jpg',
+    website: '',
+    achievements: [],
+    technologies: ['Python', 'JavaScript', 'Node.js', 'MQTT', 'Raspberry Pi'],
+  },
+];
