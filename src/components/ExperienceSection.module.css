@@ -1,0 +1,85 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 24px;
+}
+
+.period {
+  color: var(--fg-dim);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  color: var(--accent);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: var(--fg-dim);
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.achievements {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.achievements li {
+  color: var(--fg);
+  font-size: 13px;
+  line-height: 1.6;
+  padding-left: 16px;
+  position: relative;
+}
+
+.achievements li::before {
+  content: '-';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: var(--tag-bg);
+  border: 1px solid var(--border);
+  color: var(--fg-dim);
+  font-size: 11px;
+  padding: 3px 7px;
+  border-radius: 3px;
+}
+
+.educationPrompt {
+  margin: 56px 0 24px;
+}
+
+@media (max-width: 640px) {
+  .entry {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
