@@ -1,54 +1,38 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import InfoBlock from './InfoBlock';
-import StructuredData from './StructuredData';
+import { aboutContent, skillsData } from '@/lib/portfolioData';
+import styles from './AboutSection.module.css';
 
-function AboutSection({ content, photo }) {
+export default function AboutSection() {
   return (
-    <>
-      <Helmet>
-        <title>Aninda Ghosh | Full Stack Developer & Cloud Engineer</title>
-        <meta
-          name="description"
-          content="Full Stack Developer and Cloud Engineer specializing in React, Node.js, AWS, Azure, and AI/ML. MS in Computer Engineering from NYU Tandon School of Engineering."
-        />
-        <meta property="og:title" content="Aninda Ghosh | Full Stack Developer & Cloud Engineer" />
-        <meta
-          property="og:description"
-          content="Full Stack Developer specializing in cloud architecture, AI/ML, and modern web development. Ex-Solutions Architect at AB InBev."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.anindaghosh.com/" />
-        <meta property="og:image" content="https://www.anindaghosh.com/images/aninda.jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Aninda Ghosh | Full Stack Developer" />
-        <meta
-          name="twitter:description"
-          content="Full Stack Developer specializing in cloud architecture, AI/ML, and secure backend systems."
-        />
-        <link rel="canonical" href="https://www.anindaghosh.com/" />
-      </Helmet>
-      <StructuredData />
-      <section className="about-section">
-      <div className="about-header">
-        {photo && (
-          <div className="profile-photo-container">
-            <img
-              src={photo}
-              alt="Professional headshot"
-              className="profile-photo"
-            />
-          </div>
-        )}
-        <div className="about-content">
-          {content.map((item, index) => (
-            <InfoBlock key={index} icon={item.icon} text={item.text} />
+    <section id="about" className="section">
+      <div className="container">
+        <div className="section-heading">
+          <p className="prompt-label">cat about.md</p>
+        </div>
+        <div className={styles.list}>
+          {aboutContent.map((item, i) => (
+            <p key={i} className={styles.item}>
+              <span className={styles.icon}>{item.icon}</span>
+              {item.text}
+            </p>
+          ))}
+        </div>
+
+        <p className={`prompt-label ${styles.skillsPrompt}`}>ls skills/</p>
+        <div className={styles.skillGroups}>
+          {skillsData.map((group) => (
+            <div key={group.group} className={styles.skillGroup}>
+              <p className={styles.skillGroupName}>{group.group}</p>
+              <div className={styles.tags}>
+                {group.skills.map((skill) => (
+                  <span key={skill} className={styles.tag}>
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </div>
     </section>
-    </>
   );
 }
-
-export default AboutSection;

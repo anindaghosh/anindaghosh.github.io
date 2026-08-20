@@ -53,11 +53,10 @@ export const footerInfo = {
 };
 
 export const navLinks = [
-  { name: 'About', path: '/' },
-  { name: 'Work', path: '/work' },
-  { name: 'Education', path: '/education' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'Resume', path: '/resume' },
+  { name: 'about', href: '#about' },
+  { name: 'experience', href: '#experience' },
+  { name: 'projects', href: '#projects' },
+  { name: 'contact', href: '#contact' },
 ];
 
 export const skillsData = [
