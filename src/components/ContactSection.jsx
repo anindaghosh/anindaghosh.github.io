@@ -12,9 +12,9 @@ export default function ContactSection() {
           <p className="prompt-label">contact --send</p>
         </div>
 
-        <h2 className={styles.heading}>Let&apos;s build something.</h2>
+        <h2 className={styles.heading}>Want to talk more?</h2>
         <p className={styles.subheading}>
-          Always happy to talk backend systems, platform engineering, or good ideas.
+          Currently accepting: hard problems, good ideas, and unsolicited Formula 1 takes.
         </p>
 
         {email && (
@@ -38,7 +38,7 @@ export default function ContactSection() {
           <span>
             © {footerInfo.year} {footerInfo.name}
           </span>
-          <span>built with next.js, no fuss</span>
+          <span>built with next.js on vercel</span>
         </footer>
       </div>
     </section>

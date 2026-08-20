@@ -24,7 +24,7 @@ export const aboutContent = [
   },
   {
     icon: '🏆',
-    text: '1st Place at the IBM AI Demystified Hackathon (Feb 2026) for NYC Property Scout, a multi agent RAG system on watsonx Orchestrate. AI/ML researcher exploring adversarial detection, RAG, and platform safety. Huge Formula 1 fan.',
+    text: '1st Place at the IBM AI Demystified Hackathon (Feb 2026) for NYC Property Scout, a ReAct manager-worker agent system on watsonx Orchestrate. AI/ML researcher exploring adversarial detection, RAG, and platform safety. Huge Formula 1 fan.',
   },
 ];
 
@@ -136,7 +136,7 @@ export const educationData = [
     website: 'https://engineering.nyu.edu/',
     achievements: [
       'Graduate Assistant at the Office of Assessment, Accreditation & Institutional Research (AAIR), building institutional data platforms serving 8,000+ students and faculty.',
-      '1st Place, IBM AI Demystified Hackathon (Feb 2026) for NYC Property Scout, a multi-agent RAG system on IBM watsonx Orchestrate.',
+      '1st Place, IBM AI Demystified Hackathon (Feb 2026) for NYC Property Scout, a ReAct manager-worker agent system on IBM watsonx Orchestrate.',
     ],
     courses: [
       'Artificial Intelligence',
@@ -205,7 +205,7 @@ export const projectsData = [
   {
     title: 'NYC Property Scout: Multi-Agent Property Transparency System',
     description:
-      "1st Place at IBM AI Demystified Hackathon (Feb 2026). Built a multi-agent RAG system on IBM watsonx Orchestrate using a ReAct-based manager-worker pattern. A routing agent delegates queries to dataset-scoped worker agents (ACRIS, HPD, DOB, 311), each specialized in a single NYC public records source. Worker outputs are aggregated into a unified Transparency Report Card exposed through a chat interface for questions on rent inflation trends, ownership history, and building violations.",
+      "1st Place at IBM AI Demystified Hackathon (Feb 2026). Built a ReAct-based manager-worker agent system on IBM watsonx Orchestrate. A routing agent delegates queries to dataset-scoped worker agents (ACRIS, HPD, DOB, 311), each specialized in a single NYC public records source. Worker outputs are aggregated into a unified Transparency Report Card exposed through a chat interface for questions on rent inflation trends, ownership history, and building violations.",
     image: '/images/project-property-scout.png',
     technologies: [
       'IBM watsonx Orchestrate',
@@ -213,7 +213,6 @@ export const projectsData = [
       'ReAct Agents',
       'Next.js',
       'NYC Open Data APIs',
-      'Vector Search',
     ],
     features: [
       'Manager-worker agent architecture with dataset-scoped delegation',
@@ -227,7 +226,7 @@ export const projectsData = [
       pattern: 'ReAct Manager-Worker',
     },
     githubUrl: 'https://github.com/LaxmanSRawat/NYC-Property-Scout',
-    liveUrl: null,
+    liveUrl: 'https://youtu.be/dFMHC6LWsw4',
     courseInfo: 'IBM AI Demystified Hackathon, Feb 2026',
   },
   {

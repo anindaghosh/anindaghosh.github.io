@@ -1,7 +1,13 @@
+'use client';
+
+import { useState } from 'react';
 import { projectsData } from '@/lib/portfolioData';
+import ProjectDrawer from './ProjectDrawer';
 import styles from './ProjectsSection.module.css';
 
 export default function ProjectsSection() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   return (
     <section id="projects" className="section">
       <div className="container">
@@ -10,12 +16,16 @@ export default function ProjectsSection() {
         </div>
         <div className={styles.grid}>
           {projectsData.map((project) => {
-            const link = project.liveUrl || project.githubUrl || project.paperUrl;
             const metricEntries = project.metrics ? Object.entries(project.metrics) : [];
             const [metricLabel, metricValue] = metricEntries[0] || [];
 
-            const card = (
-              <>
+            return (
+              <button
+                key={project.title}
+                type="button"
+                className={styles.card}
+                onClick={() => setSelectedProject(project)}
+              >
                 <div className={styles.cardHeader}>
                   <h3 className={styles.title}>{project.title}</h3>
                 </div>
@@ -35,27 +45,14 @@ export default function ProjectsSection() {
                     <span className={styles.metricLabel}>{metricLabel}</span>
                   </div>
                 )}
-              </>
-            );
-
-            return link ? (
-              <a
-                key={project.title}
-                href={link}
-                target="_blank"
-                rel="noreferrer"
-                className={styles.card}
-              >
-                {card}
-              </a>
-            ) : (
-              <div key={project.title} className={styles.card}>
-                {card}
-              </div>
+                <p className={styles.expandHint}>[ details ]</p>
+              </button>
             );
           })}
         </div>
       </div>
+
+      <ProjectDrawer project={selectedProject} onClose={() => setSelectedProject(null)} />
     </section>
   );
 }

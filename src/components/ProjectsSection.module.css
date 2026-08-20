@@ -8,13 +8,23 @@
 
 .card {
   display: block;
+  width: 100%;
   background: var(--bg);
   padding: 28px;
+  border: none;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
   transition: background 0.15s ease;
 }
 
-a.card:hover {
+.card:hover {
   background: var(--bg-elevated);
+}
+
+.card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
 }
 
 .cardHeader {
@@ -70,6 +80,16 @@ a.card:hover {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+}
+
+.expandHint {
+  color: var(--fg-dim);
+  font-size: 11px;
+  margin-top: 16px;
+}
+
+.card:hover .expandHint {
+  color: var(--accent);
 }
 
 @media (max-width: 640px) {
