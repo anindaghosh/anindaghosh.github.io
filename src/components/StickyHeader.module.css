@@ -20,9 +20,34 @@
   font-size: 14px;
 }
 
+.navGroup {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
 .nav {
   display: flex;
   gap: 24px;
+}
+
+.themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--fg-dim);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.themeToggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 .navLink {

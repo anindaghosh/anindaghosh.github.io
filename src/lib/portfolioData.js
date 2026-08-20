@@ -173,6 +173,36 @@ export const educationData = [
 
 export const projectsData = [
   {
+    title: 'PromptOff: Competitive Multiplayer Prompt Engineering Game',
+    description:
+      'Real-time multiplayer game where up to 8 players race to recreate a reference image by writing AI image prompts within a token budget. Prompts are sent to Gemini 2.5 Flash for image generation, then scored against the reference across visual similarity (Gemini vision), prompt efficiency, and speed. Includes six offensive/defensive/utility powerups, private rooms, configurable rounds, SpacetimeAuth-backed profiles with game history, and Gemini-powered post-game coaching insights. Backend logic runs entirely inside SpacetimeDB as a WASM module with deterministic reducers and real-time WebSocket table subscriptions — no separate API server.',
+    image: '/images/project-promptoff.png',
+    technologies: [
+      'Next.js 16',
+      'React 19',
+      'TypeScript',
+      'SpacetimeDB',
+      'Gemini 2.5 Flash',
+      'SpacetimeAuth (OIDC)',
+    ],
+    features: [
+      'Real-time multiplayer via SpacetimeDB WebSocket subscriptions, no polling',
+      'Three-dimension scoring: visual similarity, prompt efficiency, speed',
+      'Six powerups (offensive/defensive/utility) assignable per player per game',
+      'SpacetimeAuth login with stable cross-device identity',
+      'Gemini-powered AI coaching insights unlocked after 5 games',
+      'Global leaderboard and per-player game history',
+    ],
+    metrics: {
+      maxPlayers: 8,
+      scoringWeights: '60/25/15 similarity/efficiency/speed',
+      architecture: 'Serverless WASM reducers, no separate API server',
+    },
+    githubUrl: 'https://github.com/anindaghosh/prompter/tree/main',
+    liveUrl: 'https://promptoff.vercel.app/',
+    courseInfo: null,
+  },
+  {
     title: 'NYC Property Scout: Multi-Agent Property Transparency System',
     description:
       "1st Place at IBM AI Demystified Hackathon (Feb 2026). Built a multi-agent RAG system on IBM watsonx Orchestrate using a ReAct-based manager-worker pattern. A routing agent delegates queries to dataset-scoped worker agents (ACRIS, HPD, DOB, 311), each specialized in a single NYC public records source. Worker outputs are aggregated into a unified Transparency Report Card exposed through a chat interface for questions on rent inflation trends, ownership history, and building violations.",
@@ -196,7 +226,7 @@ export const projectsData = [
       dataSources: 4,
       pattern: 'ReAct Manager-Worker',
     },
-    githubUrl: null,
+    githubUrl: 'https://github.com/LaxmanSRawat/NYC-Property-Scout',
     liveUrl: null,
     courseInfo: 'IBM AI Demystified Hackathon, Feb 2026',
   },
