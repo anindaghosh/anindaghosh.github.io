@@ -152,7 +152,7 @@ export const educationData = [
     institution: 'SRM Institute of Science and Technology',
     location: 'Chennai, India',
     period: 'Jul 2017 - Jul 2021',
-    description: 'Focused on systems engineering and robotics research',
+    description: 'Focused on systems engineering and robotics research.',
     logo: '/images/srm-logo.png',
     website: 'https://www.srmist.edu.in/',
     achievements: [
