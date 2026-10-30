@@ -341,7 +341,7 @@ export const projectsData = [
       'Adopted across 10+ apps',
     ],
     metrics: {
-      'apps secured': '10+',
+      'apps onboarded': '10+',
     },
     githubUrl: null,
     liveUrl: null,
