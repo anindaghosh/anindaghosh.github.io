@@ -284,6 +284,22 @@ export const projectsData = [
     courseInfo: 'NYU Tandon School of Engineering - Trust & Safety Engineering',
   },
   {
+    title: 'Minto: B2B Token Airdrops Platform',
+    description:
+      'A B2B airdrops platform on the Aptos blockchain that lets businesses distribute tokens in bulk. I designed the distribution workflows and integrated the Aptos Move smart contract SDK for programmatic on-chain transfers.',
+    image: null,
+    technologies: ['Aptos', 'Aptos Move', 'Move Smart Contract SDK'],
+    features: [
+      'Bulk token distribution for business campaigns',
+      'Distribution workflows designed for B2B airdrops',
+      'Programmatic on-chain transfers through the Aptos Move smart contract SDK',
+    ],
+    githubUrl: null,
+    liveUrl: null,
+    paperUrl: null,
+    courseInfo: 'NYU Blockchain Lab, Aptos Builder Camp 2025',
+  },
+  {
     title: 'CareVault: AI-Powered Healthcare Document Management',
     description:
       'Secure healthcare management platform for patients and caregivers to organize medical documents, schedule appointments, and track medications. RAG-powered assistant lets users query their own documents and derive health insights. Multi-profile support allows a single caregiver to manage records across dependents.',
