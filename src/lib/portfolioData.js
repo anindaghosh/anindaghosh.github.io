@@ -16,7 +16,7 @@ export const aboutContent = [
   },
   {
     icon: '🚀',
-    text: 'Founding Engineer at Parallel Worlds (Feb to May 2026). Built the engineering foundation, a Stripe Connect settlement pipeline with T+14 escrow, an AI buyer-artist matching system, and a white-label deployment for WRTH ($100M+ inventory).',
+    text: 'Founding Engineer at Parallel Worlds (Feb to May 2026), building ExhibitIQ, an art marketplace. Built the engineering foundation, a Stripe Connect settlement pipeline with T+14 escrow, crypto and fiat payment rails, an AI buyer-artist matching system, and a white-label deployment for WRTH ($100M+ inventory).',
   },
   {
     icon: '💼',
@@ -411,12 +411,13 @@ export const workData = [
     location: 'New York, NY',
     period: 'Feb 2026 - May 2026',
     description:
-      'Founding engineer at Parallel Worlds, an art marketplace. Built the engineering foundation, payments and settlement, AI matching, and a white-label deployment for WRTH, a real-world asset commerce platform with $100M+ in inventory.',
+      'Founding engineer at Parallel Worlds, building ExhibitIQ, an art marketplace. Built the engineering foundation, crypto and fiat payments and settlement, AI matching, and a white-label deployment for WRTH, a real-world asset commerce platform with $100M+ in inventory.',
     logo: '/images/parallel-worlds-logo.png',
     website: 'https://parallelworlds.io',
     achievements: [
       'Engineering Foundation: Set up the Turborepo monorepo, a shared component package used across apps, and PostHog product analytics.',
       'Settlement Pipeline: Built a settlement pipeline on Stripe Connect with T+14 escrow and a PIN-gated wallet.',
+      'Crypto & Fiat Payment Infrastructure: Built end-to-end payment rails for ExhibitIQ that handle the different reversibility rules of fiat and crypto transactions. Node.js/TypeScript BFF services deployed to Render, integrating PayPangea alongside Wagmi, Viem, and RainbowKit for wallet flows.',
       'AI Buyer-Artist Matching: Built an AI matching system that connects buyers with artists whose work fits what they are looking for.',
       'WRTH White-Label Deployment ($100M+ inventory): Led the white-label deployment for WRTH. Migrated Firebase to Supabase, added on-chain asset verification with Xion, and built a Gemini vision valuation pipeline that cut average inventory upload time from about 15 minutes to under 2.',
     ],
@@ -426,6 +427,10 @@ export const workData = [
       'Node.js',
       'Turborepo',
       'Stripe Connect',
+      'PayPangea',
+      'Wagmi',
+      'Viem',
+      'RainbowKit',
       'Supabase',
       'Firebase',
       'Xion Blockchain',
