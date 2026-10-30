@@ -9,47 +9,55 @@ export default function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section" aria-labelledby="projects-heading">
       <div className="container">
         <div className="section-heading">
-          <p className="prompt-label">ls projects/</p>
+          <h2 id="projects-heading" className="prompt-label">
+            <span aria-hidden="true">ls projects/</span>
+            <span className="sr-only">Projects</span>
+          </h2>
         </div>
-        <div className={styles.grid}>
+        <ul className={styles.grid}>
           {projectsData.map((project) => {
             const metricEntries = project.metrics ? Object.entries(project.metrics) : [];
             const [metricLabel, metricValue] = metricEntries[0] || [];
 
             return (
-              <button
-                key={project.title}
-                type="button"
-                className={styles.card}
-                onClick={() => setSelectedProject(project)}
-              >
-                <div className={styles.cardHeader}>
-                  <h3 className={styles.title}>{project.title}</h3>
-                </div>
+              <li key={project.title} className={styles.card}>
+                <h3 className={styles.title}>
+                  {/* The button's ::after covers the whole card, so the card stays one click target. */}
+                  <button
+                    type="button"
+                    className={styles.cardButton}
+                    aria-haspopup="dialog"
+                    onClick={() => setSelectedProject(project)}
+                  >
+                    {project.title}
+                  </button>
+                </h3>
                 <p className={styles.description}>{project.description}</p>
                 {project.technologies && (
-                  <div className={styles.tags}>
+                  <ul className={styles.tags} aria-label="Technologies">
                     {project.technologies.slice(0, 5).map((tech) => (
-                      <span key={tech} className={styles.tag}>
+                      <li key={tech} className={styles.tag}>
                         {tech}
-                      </span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 )}
                 {metricValue !== undefined && (
-                  <div className={styles.metric}>
+                  <p className={styles.metric}>
                     <span className={styles.metricValue}>{metricValue}</span>
                     <span className={styles.metricLabel}>{metricLabel}</span>
-                  </div>
+                  </p>
                 )}
-                <p className={styles.expandHint}>[ details ]</p>
-              </button>
+                <p className={styles.expandHint} aria-hidden="true">
+                  [ details ]
+                </p>
+              </li>
             );
           })}
-        </div>
+        </ul>
       </div>
 
       <ProjectDrawer project={selectedProject} onClose={() => setSelectedProject(null)} />
