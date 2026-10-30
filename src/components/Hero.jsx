@@ -10,8 +10,8 @@ export default function Hero() {
         <p className="prompt-label">whoami</p>
         <h1 className={styles.name}>{personalInfo.name}</h1>
         <p className={styles.tagline}>
-          <span className={styles.prompt}>&gt;</span> Full-stack engineer. I live in the
-          terminal — figured my site should too.
+          <span className={styles.prompt}>&gt;</span> Full-stack, forward-deployed engineer. I take real
+          user problems to shipped products, from agentic AI to reusable platforms.
           <span className="blink-cursor" />
         </p>
         <div className={styles.actions}>

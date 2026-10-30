@@ -1,12 +1,5 @@
-# Allow all crawlers
+# Everyone is welcome, including search engines, recruiting tools and AI agents.
 User-agent: *
 Allow: /
 
-# Disallow crawling of assets (optional, usually not needed)
-Disallow: /assets/
-
-# Sitemap location
 Sitemap: https://www.anindaghosh.com/sitemap.xml
-
-# Crawl delay (optional, can help with server load)
-Crawl-delay: 1
