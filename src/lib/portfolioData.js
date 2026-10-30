@@ -432,7 +432,7 @@ export const workData = [
     website: 'https://parallelworlds.io',
     achievements: [
       'Engineering Foundation: Set up the Turborepo monorepo, a shared component package used across apps, and PostHog product analytics.',
-      'Settlement Pipeline: Built a settlement pipeline on Stripe Connect with T+14 escrow and a PIN-gated wallet.',
+      'Settlement Pipeline: Built a settlement pipeline on Stripe Connect with T+14 escrow and a PIN-gated wallet, and helped integrate Shippo for shipping labels, pickups, and tracking.',
       'Crypto & Fiat Payment Infrastructure: Built end-to-end payment rails for ExhibitIQ that handle the different reversibility rules of fiat and crypto transactions. Node.js/TypeScript BFF services deployed to Render, integrating PayPangea alongside Wagmi, Viem, and RainbowKit for wallet flows.',
       'AI Buyer-Artist Matching: Built an AI matching system that connects buyers with artists whose work fits what they are looking for.',
       'WRTH White-Label Deployment ($100M+ inventory): Led the white-label deployment for WRTH. Migrated Firebase to Supabase, added on-chain asset verification with Xion, and built a Gemini vision valuation pipeline that cut average inventory upload time from about 15 minutes to under 2.',
@@ -447,6 +447,7 @@ export const workData = [
       'Wagmi',
       'Viem',
       'RainbowKit',
+      'Shippo',
       'Supabase',
       'Firebase',
       'Xion Blockchain',
