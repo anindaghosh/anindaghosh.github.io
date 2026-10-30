@@ -31,13 +31,15 @@ function buildProfile() {
 
   lines.push('', '## Education');
   educationData.forEach((edu) => {
-    lines.push(`- ${edu.degree}, ${edu.institution} (${edu.period}). ${edu.description}`);
+    lines.push('', `### ${edu.degree}, ${edu.institution} (${edu.period})`, edu.description);
+    edu.achievements.forEach((achievement) => lines.push(`- ${achievement}`));
   });
 
   lines.push('', '## Projects');
   projectsData.forEach((project) => {
     const link = project.liveUrl || project.githubUrl;
-    lines.push(`- ${project.title}: ${project.description}${link ? ` (${link})` : ''}`);
+    lines.push('', `### ${project.title}`, project.description);
+    if (link) lines.push(`Link: ${link}`);
   });
 
   lines.push('', '## Skills');
