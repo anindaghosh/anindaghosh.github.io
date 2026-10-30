@@ -196,36 +196,6 @@ export const educationData = [
 
 export const projectsData = [
   {
-    title: 'PromptOff: Competitive Multiplayer Prompt Engineering Game',
-    description:
-      'Real-time multiplayer game where up to 8 players race to recreate a reference image by writing AI image prompts within a token budget. Prompts are sent to Gemini 2.5 Flash for image generation, then scored against the reference across visual similarity (Gemini vision), prompt efficiency, and speed. Includes six offensive/defensive/utility powerups, private rooms, configurable rounds, SpacetimeAuth-backed profiles with game history, and Gemini-powered post-game coaching insights. Backend logic runs entirely inside SpacetimeDB as a WASM module with deterministic reducers and real-time WebSocket table subscriptions, so there is no separate API server.',
-    image: '/images/project-promptoff.png',
-    technologies: [
-      'Next.js 16',
-      'React 19',
-      'TypeScript',
-      'SpacetimeDB',
-      'Gemini 2.5 Flash',
-      'SpacetimeAuth (OIDC)',
-    ],
-    features: [
-      'Real-time multiplayer via SpacetimeDB WebSocket subscriptions, no polling',
-      'Three-dimension scoring: visual similarity, prompt efficiency, speed',
-      'Six powerups (offensive/defensive/utility) assignable per player per game',
-      'SpacetimeAuth login with stable cross-device identity',
-      'Gemini-powered AI coaching insights unlocked after 5 games',
-      'Global leaderboard and per-player game history',
-    ],
-    metrics: {
-      maxPlayers: 8,
-      scoringWeights: '60/25/15 similarity/efficiency/speed',
-      architecture: 'Serverless WASM reducers, no separate API server',
-    },
-    githubUrl: 'https://github.com/anindaghosh/prompter/tree/main',
-    liveUrl: 'https://promptoff.vercel.app/',
-    courseInfo: null,
-  },
-  {
     title: 'NYC Property Scout: Multi-Agent Property Transparency System',
     description:
       "1st Place at IBM AI Demystified Hackathon (Feb 2026). Built a ReAct-based manager-worker agent system on IBM watsonx Orchestrate. A routing agent delegates queries to dataset-scoped worker agents (ACRIS, HPD, DOB, 311), each specialized in a single NYC public records source. Worker outputs are aggregated into a unified Transparency Report Card exposed through a chat interface for questions on rent inflation trends, ownership history, and building violations.",
@@ -244,124 +214,13 @@ export const projectsData = [
       'Chat interface for natural language property queries',
     ],
     metrics: {
-      award: '1st Place / all competing teams',
-      dataSources: 4,
-      pattern: 'ReAct Manager-Worker',
+      'IBM AI Demystified Hackathon': '1st place',
+      'NYC public record sources': 4,
+      'agent pattern': 'ReAct manager-worker',
     },
     githubUrl: 'https://github.com/LaxmanSRawat/NYC-Property-Scout',
     liveUrl: 'https://youtu.be/dFMHC6LWsw4',
     courseInfo: 'IBM AI Demystified Hackathon, Feb 2026',
-  },
-  {
-    title: 'Streamjacking Detection System: Multimodal Fraud Detection for YouTube Livestreams',
-    description:
-      "Multimodal fraud detection pipeline flagging YouTube livestream impersonation scams promoting cryptocurrency fraud. Combines 16 rule-based signals (channel age, subscriber-to-view ratios, comment moderation patterns, metadata anomalies) with a fine-tuned CryptoBERT classifier operating over stream titles, descriptions, and chat transcripts. Deployed on Cloud Run with MongoDB for labeled data and evaluation runs, and evaluated on 1,500+ manually labeled videos. Research project for NYU's Trust & Safety Engineering course.",
-    image: '/images/project-streamjacking.png',
-    technologies: [
-      'Python',
-      'CryptoBERT (fine-tuned)',
-      'YouTube Data API v3',
-      'Google Cloud Run',
-      'MongoDB',
-      'scikit-learn',
-      'PyTorch',
-      'NLTK',
-    ],
-    features: [
-      '16 rule-based signals across metadata, engagement, and channel patterns',
-      'Fine-tuned CryptoBERT classifier for text-based scam detection',
-      'Cloud Run + MongoDB deployment for labeled dataset and evaluation',
-      'Evaluation on 1,500+ manually labeled videos',
-    ],
-    metrics: {
-      labeledDataset: '1,500+ videos',
-      ruleBasedSignals: 16,
-      deployment: 'Cloud Run + MongoDB',
-    },
-    githubUrl: 'https://github.com/anindaghosh/trustsafety-streamjacking-detector',
-    liveUrl: null,
-    paperUrl: null,
-    courseInfo: 'NYU Tandon School of Engineering - Trust & Safety Engineering',
-  },
-  {
-    title: 'Minto: B2B Token Airdrops Platform',
-    description:
-      'A B2B airdrops platform on the Aptos blockchain that lets businesses distribute tokens in bulk. I designed the distribution workflows and integrated the Aptos Move smart contract SDK for programmatic on-chain transfers.',
-    image: null,
-    technologies: ['Aptos', 'Aptos Move', 'Move Smart Contract SDK'],
-    features: [
-      'Bulk token distribution for business campaigns',
-      'Distribution workflows designed for B2B airdrops',
-      'Programmatic on-chain transfers through the Aptos Move smart contract SDK',
-    ],
-    githubUrl: null,
-    liveUrl: null,
-    paperUrl: null,
-    courseInfo: 'NYU Blockchain Lab, Aptos Builder Camp 2025',
-  },
-  {
-    title: 'CareVault: AI-Powered Healthcare Document Management',
-    description:
-      'Secure healthcare management platform for patients and caregivers to organize medical documents, schedule appointments, and track medications. RAG-powered assistant lets users query their own documents and derive health insights. Multi-profile support allows a single caregiver to manage records across dependents.',
-    image: '/images/project-carevault.png',
-    technologies: ['Flask', 'Supabase', 'PostgreSQL', 'RAGFlow', 'React', 'Docker'],
-    githubUrl: null,
-    liveUrl: 'https://youtu.be/ZuuEdnYPFfQ',
-  },
-  {
-    title: 'AI-Powered Vulnerability Detector',
-    description:
-      'Cloud-based web app that scans Python GitHub repos for security vulnerabilities using Bandit for static analysis and LLaMA 3B for contextual fix suggestions. Reports are CWE-tagged and include AI-generated remediation guidance alongside code snippets.',
-    image: '/images/project-vulnscanner.jpg',
-    technologies: ['Flask', 'Supabase', 'AWS', 'Bandit', 'LLaMA 3B', 'React'],
-    githubUrl: 'https://github.com/CS-GY-9223-Cloud-Vuln-Detector/backend',
-    liveUrl: 'https://main.d3k1a8dkhmpya0.amplifyapp.com/',
-  },
-  {
-    title: 'RoomScout: Student Housing Platform',
-    description:
-      'End-to-end web app for international students to find verified housing near NYC schools. Features property listings, advanced filters, student verification workflows, and GPT-powered amenity insights extracted from listing descriptions.',
-    image: '/images/project-roomscout.png',
-    technologies: ['React', 'Django', 'PostgreSQL', 'OpenAI API', 'Figma', 'Jest', 'Pytest', 'Locust'],
-    githubUrl: 'https://github.com/anindaghosh/roomscout',
-    liveUrl: null,
-  },
-  {
-    title: 'Reusable Product NPS Component',
-    description:
-      'A drop-in product NPS survey for internal apps at AB InBev that I owned from design through onboarding: a React component paired with one shared Flask backend, published through an internal Azure DevOps registry so any product team could add in-app feedback without building their own. A metadata JSON field lets each product send its own context without touching the backend schema. 10+ products onboarded.',
-    image: null,
-    technologies: ['React', 'Flask', 'Python', 'Azure App Service', 'Azure DevOps Artifacts'],
-    features: [
-      'React component installable from an internal Azure DevOps registry',
-      'One shared Flask backend, so product teams do not run their own survey service',
-      'Metadata JSON field for product-specific context with no backend schema changes',
-      'Owned onboarding for every product team, 10+ products in all',
-    ],
-    metrics: {
-      'products onboarded': '10+',
-    },
-    githubUrl: null,
-    liveUrl: null,
-    courseInfo: 'AB InBev',
-  },
-  {
-    title: 'Shared Azure App Registration Auth Pattern',
-    description:
-      'A shared Azure App Registration pattern at AB InBev that gives internal apps scoped JWT access to each other, so teams reuse one authorization model instead of wiring their own. Rolled out across 10+ apps.',
-    image: null,
-    technologies: ['Microsoft Entra ID', 'Azure App Registration', 'JWT', 'OAuth 2.0'],
-    features: [
-      'Scoped JWT access between internal apps from one shared App Registration',
-      'One authorization pattern reused across product teams',
-      'Adopted across 10+ apps',
-    ],
-    metrics: {
-      'apps onboarded': '10+',
-    },
-    githubUrl: null,
-    liveUrl: null,
-    courseInfo: 'AB InBev',
   },
   {
     title: 'ROS2 Robotics Assistant (Fine-tuned RAG)',
@@ -401,6 +260,147 @@ export const projectsData = [
     liveUrl: 'https://huggingface.co/anindaghosh/cs-gy-6613-rag-project',
     paperUrl: null,
     courseInfo: 'CS-GY 6613 Artificial Intelligence, NYU Tandon · Team project with Samrudhi Baldota',
+  },
+  {
+    title: 'PromptOff: Competitive Multiplayer Prompt Engineering Game',
+    description:
+      'Real-time multiplayer game where up to 8 players race to recreate a reference image by writing AI image prompts within a token budget. Prompts are sent to Gemini 2.5 Flash for image generation, then scored against the reference across visual similarity (Gemini vision), prompt efficiency, and speed. Includes six offensive/defensive/utility powerups, private rooms, configurable rounds, SpacetimeAuth-backed profiles with game history, and Gemini-powered post-game coaching insights. Backend logic runs entirely inside SpacetimeDB as a WASM module with deterministic reducers and real-time WebSocket table subscriptions, so there is no separate API server.',
+    image: '/images/project-promptoff.png',
+    technologies: [
+      'Next.js 16',
+      'React 19',
+      'TypeScript',
+      'SpacetimeDB',
+      'Gemini 2.5 Flash',
+      'SpacetimeAuth (OIDC)',
+    ],
+    features: [
+      'Real-time multiplayer via SpacetimeDB WebSocket subscriptions, no polling',
+      'Three-dimension scoring: visual similarity, prompt efficiency, speed',
+      'Six powerups (offensive/defensive/utility) assignable per player per game',
+      'SpacetimeAuth login with stable cross-device identity',
+      'Gemini-powered AI coaching insights unlocked after 5 games',
+      'Global leaderboard and per-player game history',
+    ],
+    metrics: {
+      'players per game': 8,
+      'scoring split (similarity / efficiency / speed)': '60 / 25 / 15',
+      backend: 'serverless WASM reducers, no API server',
+    },
+    githubUrl: 'https://github.com/anindaghosh/prompter/tree/main',
+    liveUrl: 'https://promptoff.vercel.app/',
+    courseInfo: null,
+  },
+  {
+    title: 'Streamjacking Detection System: Multimodal Fraud Detection for YouTube Livestreams',
+    description:
+      "Multimodal fraud detection pipeline flagging YouTube livestream impersonation scams promoting cryptocurrency fraud. Combines 16 rule-based signals (channel age, subscriber-to-view ratios, comment moderation patterns, metadata anomalies) with a fine-tuned CryptoBERT classifier operating over stream titles, descriptions, and chat transcripts. Deployed on Cloud Run with MongoDB for labeled data and evaluation runs, and evaluated on 1,500+ manually labeled videos. Research project for NYU's Trust & Safety Engineering course.",
+    image: '/images/project-streamjacking.png',
+    technologies: [
+      'Python',
+      'CryptoBERT (fine-tuned)',
+      'YouTube Data API v3',
+      'Google Cloud Run',
+      'MongoDB',
+      'scikit-learn',
+      'PyTorch',
+      'NLTK',
+    ],
+    features: [
+      '16 rule-based signals across metadata, engagement, and channel patterns',
+      'Fine-tuned CryptoBERT classifier for text-based scam detection',
+      'Cloud Run + MongoDB deployment for labeled dataset and evaluation',
+      'Evaluation on 1,500+ manually labeled videos',
+    ],
+    metrics: {
+      'labeled videos': '1,500+',
+      'rule-based signals': 16,
+      deployment: 'Cloud Run + MongoDB',
+    },
+    githubUrl: 'https://github.com/anindaghosh/trustsafety-streamjacking-detector',
+    liveUrl: null,
+    paperUrl: null,
+    courseInfo: 'NYU Tandon School of Engineering - Trust & Safety Engineering',
+  },
+  {
+    title: 'Reusable Product NPS Component',
+    description:
+      'A drop-in product NPS survey for internal apps at AB InBev that I owned from design through onboarding: a React component paired with one shared Flask backend, published through an internal Azure DevOps registry so any product team could add in-app feedback without building their own. A metadata JSON field lets each product send its own context without touching the backend schema. 10+ products onboarded.',
+    image: null,
+    technologies: ['React', 'Flask', 'Python', 'Azure App Service', 'Azure DevOps Artifacts'],
+    features: [
+      'React component installable from an internal Azure DevOps registry',
+      'One shared Flask backend, so product teams do not run their own survey service',
+      'Metadata JSON field for product-specific context with no backend schema changes',
+      'Owned onboarding for every product team, 10+ products in all',
+    ],
+    metrics: {
+      'products onboarded': '10+',
+    },
+    githubUrl: null,
+    liveUrl: null,
+    courseInfo: 'AB InBev',
+  },
+  {
+    title: 'Shared Azure App Registration Auth Pattern',
+    description:
+      'A shared Azure App Registration pattern at AB InBev that gives internal apps scoped JWT access to each other, so teams reuse one authorization model instead of wiring their own. Rolled out across 10+ apps.',
+    image: null,
+    technologies: ['Microsoft Entra ID', 'Azure App Registration', 'JWT', 'OAuth 2.0'],
+    features: [
+      'Scoped JWT access between internal apps from one shared App Registration',
+      'One authorization pattern reused across product teams',
+      'Adopted across 10+ apps',
+    ],
+    metrics: {
+      'apps onboarded': '10+',
+    },
+    githubUrl: null,
+    liveUrl: null,
+    courseInfo: 'AB InBev',
+  },
+  {
+    title: 'CareVault: AI-Powered Healthcare Document Management',
+    description:
+      'Secure healthcare management platform for patients and caregivers to organize medical documents, schedule appointments, and track medications. RAG-powered assistant lets users query their own documents and derive health insights. Multi-profile support allows a single caregiver to manage records across dependents.',
+    image: '/images/project-carevault.png',
+    technologies: ['Flask', 'Supabase', 'PostgreSQL', 'RAGFlow', 'React', 'Docker'],
+    githubUrl: null,
+    liveUrl: 'https://youtu.be/ZuuEdnYPFfQ',
+  },
+  {
+    title: 'AI-Powered Vulnerability Detector',
+    description:
+      'Cloud-based web app that scans Python GitHub repos for security vulnerabilities using Bandit for static analysis and LLaMA 3B for contextual fix suggestions. Reports are CWE-tagged and include AI-generated remediation guidance alongside code snippets.',
+    image: '/images/project-vulnscanner.jpg',
+    technologies: ['Flask', 'Supabase', 'AWS', 'Bandit', 'LLaMA 3B', 'React'],
+    githubUrl: 'https://github.com/CS-GY-9223-Cloud-Vuln-Detector/backend',
+    liveUrl: 'https://main.d3k1a8dkhmpya0.amplifyapp.com/',
+  },
+  {
+    title: 'Minto: B2B Token Airdrops Platform',
+    description:
+      'A B2B airdrops platform on the Aptos blockchain that lets businesses distribute tokens in bulk. I designed the distribution workflows and integrated the Aptos Move smart contract SDK for programmatic on-chain transfers.',
+    image: null,
+    technologies: ['Aptos', 'Aptos Move', 'Move Smart Contract SDK'],
+    features: [
+      'Bulk token distribution for business campaigns',
+      'Distribution workflows designed for B2B airdrops',
+      'Programmatic on-chain transfers through the Aptos Move smart contract SDK',
+    ],
+    githubUrl: null,
+    liveUrl: null,
+    paperUrl: null,
+    courseInfo: 'NYU Blockchain Lab, Aptos Builder Camp 2025',
+  },
+  {
+    title: 'RoomScout: Student Housing Platform',
+    description:
+      'End-to-end web app for international students to find verified housing near NYC schools. Features property listings, advanced filters, student verification workflows, and GPT-powered amenity insights extracted from listing descriptions.',
+    image: '/images/project-roomscout.png',
+    technologies: ['React', 'Django', 'PostgreSQL', 'OpenAI API', 'Figma', 'Jest', 'Pytest', 'Locust'],
+    githubUrl: 'https://github.com/anindaghosh/roomscout',
+    liveUrl: null,
   },
   {
     title: "PC Makr: India's First PC Component Aggregator",

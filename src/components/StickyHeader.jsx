@@ -41,33 +41,42 @@ export default function StickyHeader() {
     .join('')
     .toLowerCase();
 
+  const nextTheme = resolvedTheme === 'dark' ? 'light' : 'dark';
+
   return (
     <header className={styles.header}>
       <div className={`container ${styles.inner}`}>
-        <a href="#top" className={styles.logo}>
+        <a href="#top" className={styles.logo} aria-label={`${initials}, back to top`}>
           {initials}
         </a>
         <div className={styles.navGroup}>
-          <nav className={styles.nav}>
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className={`${styles.navLink} ${
-                  activeSection === link.href.slice(1) ? styles.navLinkActive : ''
-                }`}
-              >
-                {link.name}
-              </a>
-            ))}
+          <nav className={styles.nav} aria-label="Sections">
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.href.slice(1);
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={`${styles.navLink} ${isActive ? styles.navLinkActive : ''}`}
+                  aria-current={isActive ? 'location' : undefined}
+                >
+                  {link.name}
+                </a>
+              );
+            })}
           </nav>
           <button
             type="button"
             className={styles.themeToggle}
-            onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-            aria-label="Toggle theme"
+            onClick={() => setTheme(nextTheme)}
+            aria-label={mounted ? `Switch to ${nextTheme} theme` : 'Toggle theme'}
           >
-            {mounted && (resolvedTheme === 'dark' ? <FiSun size={15} /> : <FiMoon size={15} />)}
+            {mounted &&
+              (resolvedTheme === 'dark' ? (
+                <FiSun size={15} aria-hidden="true" />
+              ) : (
+                <FiMoon size={15} aria-hidden="true" />
+              ))}
           </button>
         </div>
       </div>

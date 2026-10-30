@@ -3,32 +3,40 @@ import styles from './AboutSection.module.css';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="section">
+    <section id="about" className="section" aria-labelledby="about-heading">
       <div className="container">
         <div className="section-heading">
-          <p className="prompt-label">cat about.md</p>
+          <h2 id="about-heading" className="prompt-label">
+            <span aria-hidden="true">cat about.md</span>
+            <span className="sr-only">About</span>
+          </h2>
         </div>
-        <div className={styles.list}>
+        <ul className={styles.list}>
           {aboutContent.map((item, i) => (
-            <p key={i} className={styles.item}>
-              <span className={styles.icon}>{item.icon}</span>
+            <li key={i} className={styles.item}>
+              <span className={styles.icon} aria-hidden="true">
+                {item.icon}
+              </span>
               {item.text}
-            </p>
+            </li>
           ))}
-        </div>
+        </ul>
 
-        <p className={`prompt-label ${styles.skillsPrompt}`}>ls skills/</p>
+        <h3 className={`prompt-label ${styles.skillsPrompt}`}>
+          <span aria-hidden="true">ls skills/</span>
+          <span className="sr-only">Skills</span>
+        </h3>
         <div className={styles.skillGroups}>
           {skillsData.map((group) => (
             <div key={group.group} className={styles.skillGroup}>
-              <p className={styles.skillGroupName}>{group.group}</p>
-              <div className={styles.tags}>
+              <h4 className={styles.skillGroupName}>{group.group}</h4>
+              <ul className={styles.tags}>
                 {group.skills.map((skill) => (
-                  <span key={skill} className={styles.tag}>
+                  <li key={skill} className={styles.tag}>
                     {skill}
-                  </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>

@@ -3,10 +3,13 @@ import styles from './ExperienceSection.module.css';
 
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="section">
+    <section id="experience" className="section" aria-labelledby="experience-heading">
       <div className="container">
         <div className="section-heading">
-          <p className="prompt-label">ls experience/</p>
+          <h2 id="experience-heading" className="prompt-label">
+            <span aria-hidden="true">ls experience/</span>
+            <span className="sr-only">Experience</span>
+          </h2>
         </div>
 
         <div className={styles.timeline}>
@@ -16,7 +19,8 @@ export default function ExperienceSection() {
               <div>
                 <h3 className={styles.title}>{job.position}</h3>
                 <p className={styles.subtitle}>
-                  {job.company} · {job.location}
+                  {job.company} <span aria-hidden="true">·</span>
+                  <span className="sr-only">,</span> {job.location}
                 </p>
                 <p className={styles.description}>{job.description}</p>
                 {job.achievements.length > 0 && (
@@ -26,27 +30,31 @@ export default function ExperienceSection() {
                     ))}
                   </ul>
                 )}
-                <div className={styles.tags}>
+                <ul className={styles.tags} aria-label={`${job.position} technologies`}>
                   {job.technologies.map((tech) => (
-                    <span key={tech} className={styles.tag}>
+                    <li key={tech} className={styles.tag}>
                       {tech}
-                    </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </article>
           ))}
         </div>
 
-        <p className={`prompt-label ${styles.educationPrompt}`}>ls education/</p>
+        <h3 className={`prompt-label ${styles.educationPrompt}`}>
+          <span aria-hidden="true">ls education/</span>
+          <span className="sr-only">Education</span>
+        </h3>
         <div className={styles.timeline}>
           {educationData.map((edu) => (
             <article key={edu.degree} className={styles.entry}>
               <p className={styles.period}>{edu.period}</p>
               <div>
-                <h3 className={styles.title}>{edu.degree}</h3>
+                <h4 className={styles.title}>{edu.degree}</h4>
                 <p className={styles.subtitle}>
-                  {edu.institution} · {edu.location}
+                  {edu.institution} <span aria-hidden="true">·</span>
+                  <span className="sr-only">,</span> {edu.location}
                 </p>
                 <p className={styles.description}>{edu.description}</p>
                 {edu.achievements.length > 0 && (

@@ -4,16 +4,20 @@ import AboutSection from '@/components/AboutSection';
 import ExperienceSection from '@/components/ExperienceSection';
 import ProjectsSection from '@/components/ProjectsSection';
 import ContactSection from '@/components/ContactSection';
+import SiteFooter from '@/components/SiteFooter';
 
 export default function HomePage() {
   return (
     <>
       <StickyHeader />
-      <Hero />
-      <AboutSection />
-      <ExperienceSection />
-      <ProjectsSection />
-      <ContactSection />
+      <main id="main" tabIndex={-1}>
+        <Hero />
+        <AboutSection />
+        <ExperienceSection />
+        <ProjectsSection />
+        <ContactSection />
+      </main>
+      <SiteFooter />
     </>
   );
 }
