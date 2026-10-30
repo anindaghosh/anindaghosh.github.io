@@ -107,6 +107,13 @@
   color: var(--accent);
 }
 
+/* With an odd number of projects, let the last card span both columns instead of leaving an empty cell. */
+@media (min-width: 641px) {
+  .card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 640px) {
   .grid {
     grid-template-columns: 1fr;
