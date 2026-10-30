@@ -17,7 +17,9 @@
 .logo {
   color: var(--accent);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 0.875rem;
+  padding: 4px;
+  margin-left: -4px;
 }
 
 .navGroup {
@@ -35,8 +37,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   background: none;
   border: 1px solid var(--border);
   border-radius: 4px;
@@ -52,7 +54,7 @@
 
 .navLink {
   color: var(--fg-dim);
-  font-size: 13px;
+  font-size: 0.8125rem;
   padding: 6px 2px;
   border-bottom: 1px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
@@ -60,6 +62,7 @@
 
 .navLink::before {
   content: '#';
+  content: '#' / '';
   opacity: 0.5;
   margin-right: 2px;
 }
@@ -71,4 +74,34 @@
 .navLinkActive {
   color: var(--accent);
   border-bottom-color: var(--accent);
+}
+
+/* On phones the nav moves to its own row so nothing overflows the viewport. */
+@media (max-width: 640px) {
+  .inner {
+    height: auto;
+    flex-wrap: wrap;
+    row-gap: 4px;
+    padding-top: 10px;
+    padding-bottom: 6px;
+  }
+
+  .navGroup {
+    display: contents;
+  }
+
+  .themeToggle {
+    order: 1;
+  }
+
+  .nav {
+    order: 2;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .navLink::before {
+    display: none;
+  }
 }

@@ -12,25 +12,25 @@
 
 .period {
   color: var(--fg-dim);
-  font-size: 12px;
+  font-size: 0.75rem;
   white-space: nowrap;
 }
 
 .title {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 4px;
 }
 
 .subtitle {
   color: var(--accent);
-  font-size: 13px;
+  font-size: 0.8125rem;
   margin-bottom: 10px;
 }
 
 .description {
   color: var(--fg-dim);
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1.6;
   margin-bottom: 12px;
 }
@@ -45,7 +45,7 @@
 
 .achievements li {
   color: var(--fg);
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1.6;
   padding-left: 16px;
   position: relative;
@@ -68,7 +68,7 @@
   background: var(--tag-bg);
   border: 1px solid var(--border);
   color: var(--fg-dim);
-  font-size: 11px;
+  font-size: 0.6875rem;
   padding: 3px 7px;
   border-radius: 3px;
 }
