@@ -1,4 +1,4 @@
-// src/data/portfolioData.js
+// src/lib/portfolioData.js
 
 export const personalInfo = {
   name: 'Aninda Ghosh',
@@ -7,24 +7,28 @@ export const personalInfo = {
 
 export const aboutContent = [
   {
+    icon: '🧭',
+    text: "Full-stack and forward-deployed engineer. I start from a user's real problem and take it all the way to a shipped product, and I do my best work in small, founder-led teams. Available to start within two weeks.",
+  },
+  {
     icon: '🎓',
-    text: "CS Master's from NYU Tandon (May 2026, GPA 3.75) focusing on AI/ML, Cloud Computing, Big Data, Software Engineering, and Security.",
+    text: "Finished my MS in Computer Science at NYU Tandon in May 2026 (GPA 3.75), with coursework in AI/ML, Cloud Computing, Big Data, Software Engineering, and Security.",
   },
   {
     icon: '🚀',
-    text: 'Founding Engineer at Parallel Worlds, building end to end payment infrastructure (Stripe Connect, escrow, dispute handling) and a white label deployment for WRTH ($100M+ real world asset inventory) with on chain verification and AI valuation.',
+    text: 'Founding Engineer at Parallel Worlds (Feb to May 2026). Built the engineering foundation, a Stripe Connect settlement pipeline with T+14 escrow, an AI buyer-artist matching system, and a white-label deployment for WRTH ($100M+ inventory).',
   },
   {
     icon: '💼',
-    text: 'Prev Solutions Architect at AB InBev (4 years). Shipped a financial reconciliation platform processing 150M+ daily records with 120x latency improvement, an enterprise NPS PWA serving 50,000+ stakeholders (88 NPS, Bain validated), and sales automation across 13 European countries.',
+    text: '3 years at AB InBev, first as a Software Development Engineer and then as a Solutions Architect. Shipped a reconciliation platform handling 150M+ daily records with a 120x latency improvement, an NPS PWA for 50,000+ stakeholders (88 NPS, validated by Bain & Company), and an offline-first master data app for 2,000 sales reps in 10+ countries.',
   },
   {
     icon: '🔒',
-    text: 'Security Champion with 73% vulnerability reduction across 25+ apps. Led Privacy Impact Assessments and SOX compliance for financial reconciliation. Comfortable across Azure, AWS, and GCP with secure infrastructure and DevSecOps pipelines.',
+    text: 'Security Champion at AB InBev, cutting open security issues by 73% across 25+ apps. Comfortable across Azure, AWS, and GCP, with Terraform and CI pipelines doing the heavy lifting.',
   },
   {
     icon: '🏆',
-    text: '1st Place at the IBM AI Demystified Hackathon (Feb 2026) for NYC Property Scout, a ReAct manager-worker agent system on watsonx Orchestrate. AI/ML researcher exploring adversarial detection, RAG, and platform safety. Huge Formula 1 fan.',
+    text: '1st place at the IBM AI Demystified Hackathon 2026 for NYC Property Scout, a multi-agent system on watsonx Orchestrate. Excellence in Action Award (Transformation) at AB InBev in 2022. Huge Formula 1 fan.',
   },
 ];
 
@@ -62,66 +66,60 @@ export const navLinks = [
 export const skillsData = [
   {
     group: 'Languages',
-    skills: ['Python', 'TypeScript', 'JavaScript', 'SQL', 'Bash'],
+    skills: ['TypeScript', 'JavaScript', 'Python', 'SQL'],
   },
   {
-    group: 'Frameworks',
-    skills: ['React', 'Next.js', 'Node.js', 'FastAPI', 'Flask', 'Express.js', 'D3.js'],
+    group: 'Frontend',
+    skills: ['React', 'Next.js', 'Vite', 'Tailwind', 'D3.js', 'PWAs & Offline-First', 'WebSockets'],
+  },
+  {
+    group: 'Backend',
+    skills: ['Node.js', 'Hono', 'FastAPI', 'Flask', 'Stripe Connect'],
+  },
+  {
+    group: 'AI',
+    skills: [
+      'LLM & Agent Apps',
+      'GPT-4',
+      'Claude',
+      'Gemini',
+      'IBM watsonx Orchestrate',
+      'Vision Pipelines',
+    ],
   },
   {
     group: 'Cloud & Infrastructure',
-    skills: [
-      'Microsoft Azure',
-      'AWS',
-      'Google Cloud',
-      'Render',
-      'Vercel',
-      'Terraform',
-      'Docker',
-      'CI/CD',
-      'Azure DevOps',
-      'GitHub Actions',
-    ],
+    skills: ['Microsoft Azure', 'AWS', 'Google Cloud', 'Terraform', 'Docker'],
   },
   {
-    group: 'AI & Data',
-    skills: [
-      'RAG Pipelines',
-      'Agentic Systems (ReAct, Manager-Worker)',
-      'LLM Integration (GPT-4, Claude, Gemini)',
-      'Vector Search',
-      'Prompt Engineering',
-      'TensorFlow',
-      'PyTorch',
-    ],
-  },
-  {
-    group: 'Data & Platforms',
+    group: 'Data',
     skills: [
       'PostgreSQL',
       'MySQL',
-      'SQL Server',
+      'Azure SQL',
       'MongoDB',
       'Redis',
       'Supabase',
       'Firebase',
       'Apache Airflow',
-      'Azure Data Factory',
-      'Tableau',
-      'PowerBI',
     ],
   },
   {
-    group: 'Payments & Web3',
-    skills: ['Stripe Connect', 'PayPangea', 'Wagmi', 'Viem', 'RainbowKit', 'Aptos Move', 'Xion'],
+    group: 'Web3',
+    skills: ['Xion', 'On-Chain Verification'],
   },
   {
-    group: 'Security & Monitoring',
-    skills: ['Snyk', 'Checkmarx', 'SonarCloud', 'Apiiro', 'Datadog', 'Application Insights'],
-  },
-  {
-    group: 'Testing',
-    skills: ['Pytest', 'Jest', 'Cypress', 'Locust', 'K6'],
+    group: 'Tools',
+    skills: [
+      'Claude Code',
+      'Cursor',
+      'GitHub Actions',
+      'Azure DevOps',
+      'Vercel',
+      'Turborepo',
+      'Datadog',
+      'PostHog',
+    ],
   },
 ];
 
@@ -130,13 +128,13 @@ export const educationData = [
     degree: 'Master of Science in Computer Science',
     institution: 'New York University - Tandon School of Engineering',
     location: 'Brooklyn, NY',
-    period: '2024 - 2026',
-    description: 'GPA 3.75/4.0. Specializing in AI/ML, Cloud Computing, Big Data, Software Engineering, and Security.',
+    period: 'Sep 2024 - May 2026',
+    description: 'GPA 3.75/4.0. Completed May 2026, with coursework in AI/ML, Cloud Computing, Big Data, Software Engineering, and Security.',
     logo: '/images/nyu-logo.png',
     website: 'https://engineering.nyu.edu/',
     achievements: [
-      'Graduate Assistant at the Office of Assessment, Accreditation & Institutional Research (AAIR), building institutional data platforms serving 8,000+ students and faculty.',
-      '1st Place, IBM AI Demystified Hackathon (Feb 2026) for NYC Property Scout, a ReAct manager-worker agent system on IBM watsonx Orchestrate.',
+      'Graduate Assistant at the Office of Assessment, Accreditation & Institutional Research (AAIR), building the SeEval course feedback platform for 8,000+ students and faculty.',
+      '1st Place, IBM AI Demystified Hackathon 2026 for NYC Property Scout, a ReAct manager-worker agent system on IBM watsonx Orchestrate.',
     ],
     courses: [
       'Artificial Intelligence',
@@ -153,7 +151,7 @@ export const educationData = [
     degree: 'Bachelor of Technology in Computer Science & Engineering',
     institution: 'SRM Institute of Science and Technology',
     location: 'Chennai, India',
-    period: '2017 - 2021',
+    period: 'Jul 2017 - Jul 2021',
     description: 'Focused on systems engineering and robotics research',
     logo: '/images/srm-logo.png',
     website: 'https://www.srmist.edu.in/',
@@ -175,7 +173,7 @@ export const projectsData = [
   {
     title: 'PromptOff: Competitive Multiplayer Prompt Engineering Game',
     description:
-      'Real-time multiplayer game where up to 8 players race to recreate a reference image by writing AI image prompts within a token budget. Prompts are sent to Gemini 2.5 Flash for image generation, then scored against the reference across visual similarity (Gemini vision), prompt efficiency, and speed. Includes six offensive/defensive/utility powerups, private rooms, configurable rounds, SpacetimeAuth-backed profiles with game history, and Gemini-powered post-game coaching insights. Backend logic runs entirely inside SpacetimeDB as a WASM module with deterministic reducers and real-time WebSocket table subscriptions — no separate API server.',
+      'Real-time multiplayer game where up to 8 players race to recreate a reference image by writing AI image prompts within a token budget. Prompts are sent to Gemini 2.5 Flash for image generation, then scored against the reference across visual similarity (Gemini vision), prompt efficiency, and speed. Includes six offensive/defensive/utility powerups, private rooms, configurable rounds, SpacetimeAuth-backed profiles with game history, and Gemini-powered post-game coaching insights. Backend logic runs entirely inside SpacetimeDB as a WASM module with deterministic reducers and real-time WebSocket table subscriptions, so there is no separate API server.',
     image: '/images/project-promptoff.png',
     technologies: [
       'Next.js 16',
@@ -232,7 +230,7 @@ export const projectsData = [
   {
     title: 'Streamjacking Detection System: Multimodal Fraud Detection for YouTube Livestreams',
     description:
-      "Multimodal fraud detection pipeline flagging YouTube livestream impersonation scams promoting cryptocurrency fraud. Combines 16 rule-based signals (channel age, subscriber-to-view ratios, comment moderation patterns, metadata anomalies) with a fine-tuned CryptoBERT classifier operating over stream titles, descriptions, and chat transcripts. Visual frame analysis is in progress to add a third modality. Deployed on Cloud Run with MongoDB for labeled data and evaluation runs, and evaluated on 1,500+ manually labeled videos. Research project for NYU's Trust & Safety Engineering course.",
+      "Multimodal fraud detection pipeline flagging YouTube livestream impersonation scams promoting cryptocurrency fraud. Combines 16 rule-based signals (channel age, subscriber-to-view ratios, comment moderation patterns, metadata anomalies) with a fine-tuned CryptoBERT classifier operating over stream titles, descriptions, and chat transcripts. Deployed on Cloud Run with MongoDB for labeled data and evaluation runs, and evaluated on 1,500+ manually labeled videos. Research project for NYU's Trust & Safety Engineering course.",
     image: '/images/project-streamjacking.png',
     technologies: [
       'Python',
@@ -247,7 +245,6 @@ export const projectsData = [
     features: [
       '16 rule-based signals across metadata, engagement, and channel patterns',
       'Fine-tuned CryptoBERT classifier for text-based scam detection',
-      'Visual frame analysis pipeline (in progress) for third detection modality',
       'Cloud Run + MongoDB deployment for labeled dataset and evaluation',
       'Evaluation on 1,500+ manually labeled videos',
     ],
@@ -289,6 +286,42 @@ export const projectsData = [
     liveUrl: null,
   },
   {
+    title: 'Reusable Product NPS Component',
+    description:
+      'A drop-in product NPS survey for internal apps at AB InBev: a React component paired with a shared Flask backend, published through an internal Azure DevOps registry so any product team could add in-app feedback without building their own. Shipped to 10+ products.',
+    image: null,
+    technologies: ['React', 'Flask', 'Python', 'Azure App Service', 'Azure DevOps Artifacts'],
+    features: [
+      'React component installable from an internal Azure DevOps registry',
+      'Shared Flask backend so product teams do not run their own survey service',
+      'Adopted across 10+ internal products',
+    ],
+    metrics: {
+      products: '10+',
+    },
+    githubUrl: null,
+    liveUrl: null,
+    courseInfo: 'AB InBev',
+  },
+  {
+    title: 'Shared Azure App Registration Auth Pattern',
+    description:
+      'A shared Azure App Registration pattern at AB InBev that gives internal apps scoped JWT access to each other, so teams reuse one authorization model instead of wiring their own. Rolled out across 10+ apps.',
+    image: null,
+    technologies: ['Microsoft Entra ID', 'Azure App Registration', 'JWT', 'OAuth 2.0'],
+    features: [
+      'Scoped JWT access between internal apps from one shared App Registration',
+      'One authorization pattern reused across product teams',
+      'Adopted across 10+ apps',
+    ],
+    metrics: {
+      apps: '10+',
+    },
+    githubUrl: null,
+    liveUrl: null,
+    courseInfo: 'AB InBev',
+  },
+  {
     title: 'Fine-Tuned Retrieval-Augmented Generation (RAG) System',
     description:
       'Performant document QA agent built with LangChain, Qdrant, OpenAI, and FAISS. Fine-tuning retrieval and reranking layers lifted BLEU to 0.87 and reduced end-to-end latency by 25% compared to the baseline pipeline.',
@@ -322,90 +355,27 @@ export const workData = [
     location: 'New York, NY',
     period: 'Feb 2026 - May 2026',
     description:
-      'Founding engineer at Parallel Worlds, building end-to-end payment, settlement, and fulfillment infrastructure for a live art marketplace, and architecting the white-label expansion for WRTH (real-world asset commerce, $100M+ inventory).',
+      'Founding engineer at Parallel Worlds, an art marketplace. Built the engineering foundation, payments and settlement, AI matching, and a white-label deployment for WRTH, a real-world asset commerce platform with $100M+ in inventory.',
     logo: '/images/parallel-worlds-logo.png',
     website: 'https://parallelworlds.io',
     achievements: [
-      'Custom Stripe Connect Settlement Pipeline: Designed and shipped a settlement engine with T+14 escrow triggered on delivery confirmation, state-by-state tax calculation, platform fee deductions, and credit card fee handling. Replaced Stripe\'s hosted checkout with custom UI components for tighter marketplace-native UX, backed by webhook-driven dispute and chargeback handling.',
-      'Order Fulfillment & Logistics: Integrated Shippo for label generation, pickup scheduling, and live tracking. Escrow release logic keyed off delivery confirmation events, with idempotent fund hold mechanisms to guard against duplicate webhook processing.',
-      'WRTH White-Label Expansion ($100M+ inventory): Led architecture of a white-label deployment for real-world asset commerce. Migrated Firebase to Supabase with edge functions, redesigned the multi-channel inventory data model, integrated on-chain asset verification via Xion blockchain, and built a Gemini-powered valuation pipeline using computer vision to identify items from photos and pull cross-marketplace pricing (eBay, StockX).',
-      'Crypto & Fiat Payment Infrastructure: Built end-to-end payment rails handling differing reversibility rules for fiat and crypto transactions. Node.js/TypeScript BFF services deployed to Render, integrating PayPangea alongside Wagmi/Viem/RainbowKit for wallet flows.',
+      'Engineering Foundation: Set up the Turborepo monorepo, a shared component package used across apps, and PostHog product analytics.',
+      'Settlement Pipeline: Built a settlement pipeline on Stripe Connect with T+14 escrow and a PIN-gated wallet.',
+      'AI Buyer-Artist Matching: Built an AI matching system that connects buyers with artists whose work fits what they are looking for.',
+      'WRTH White-Label Deployment ($100M+ inventory): Led the white-label deployment for WRTH. Migrated Firebase to Supabase, added on-chain asset verification with Xion, and built a Gemini vision valuation pipeline that cut average inventory upload time from about 15 minutes to under 2.',
     ],
     technologies: [
       'Next.js',
       'TypeScript',
       'Node.js',
+      'Turborepo',
       'Stripe Connect',
-      'Shippo',
-      'PayPangea',
-      'Wagmi',
-      'Viem',
-      'RainbowKit',
-      'Xion Blockchain',
       'Supabase',
       'Firebase',
+      'Xion Blockchain',
       'Gemini Vision',
-      'Render',
+      'PostHog',
       'Vercel',
-    ],
-  },
-  {
-    position: 'Solutions Architect',
-    company: 'AB InBev',
-    location: 'Bengaluru, India',
-    period: 'Jan 2023 - Jul 2024',
-    description:
-      'Led enterprise architecture for critical business applications across Finance, Operations, and Employee Experience. Designed secure, scalable Azure solutions serving 7,000+ users across 5 global regions.',
-    logo: '/images/ab-inbev-logo.jpg',
-    website: 'https://www.ab-inbev.com',
-    achievements: [
-      'Financial Reconciliation Platform (150M+ daily records): Architected an event-driven platform processing 150M+ daily financial records for 7,000+ finance users across 5 regions. Ingested ERP data via Azure Data Factory pipelines into zone-partitioned Azure SQL with deferred join strategies, used Event Grid for async processing and Storage Containers for document handling, and layered Redis caching on top. Cut API latency from 2 minutes to under 1 second (120x improvement), saving $600K annually.',
-      'Enterprise NPS Platform: Built a React/Flask PWA with WebSocket-powered real-time dashboards and Azure Entra SSO, serving 50,000+ stakeholders across 800 teams. Increased survey response rate from 30% to 70% and achieved an 88 NPS score, externally validated by Bain & Company.',
-      'Security Champion: Led security architecture reviews across NA/Europe/Africa product teams. Enforced a golden CI pipeline (Snyk, SonarCloud, automated SAST/SCA), mandated Azure Key Vault for secrets, Azure-generated JWTs with RBAC, App Configuration for secure feature flags, and ORM usage (SQLAlchemy, Prisma) across all web apps. Reduced vulnerabilities by 73% across 25+ applications, ran Privacy Impact Assessments, and ensured SOX compliance for the reconciliation platform.',
-      'Fixed Assets Verification: Led digitization of 700K physical assets across the North American zone, delivering $500K in tax savings with a 2-week turnaround and automated audit workflows.',
-      'Enterprise Architecture Standards: Established Azure Landing Zone patterns, Terraform IaC standards, and secure API gateway architectures adopted across the Digital Solutions organization.',
-    ],
-    technologies: [
-      'Azure (Data Factory, Event Grid, SQL, Key Vault, Entra)',
-      'Terraform',
-      'PostgreSQL',
-      'React',
-      'Flask',
-      'Python',
-      'Node.js',
-      'Redis',
-      'Azure DevOps',
-      'Snyk',
-      'SonarCloud',
-    ],
-  },
-  {
-    position: 'Software Development Engineer I',
-    company: 'AB InBev',
-    location: 'Bengaluru, India',
-    period: 'Jul 2021 - Dec 2022',
-    description:
-      'Built full-stack enterprise applications for workforce management and sales operations. Delivered customer-embedded solutions across Europe and India requiring stakeholder collaboration across 13+ countries.',
-    logo: '/images/ab-inbev-logo.jpg',
-    website: 'https://www.ab-inbev.com',
-    achievements: [
-      'European Sales Automation (13 countries): Built an offline-first React SPA for 2,000 sales reps across 13 European countries. Integrated 7 SAP BAPIs, Salesforce Connected App, and ServiceNow approval workflows with country-specific validation (IBAN, VAT). Cut data turnaround from 3 days to under 1 day and lifted first-time-right rate from 40% to 95%.',
-      'Hybrid Work Platform (5,000 employees): Shipped an end-to-end workspace management PWA serving 5,000 employees with 100% adoption and 1,000+ daily bookings, replacing a $120K/year vendor. Integrated Web Serial API for USB thermal scanners, government health verification APIs, and transport booking systems. Cut scheduling errors from 25% to under 5%.',
-      'Reusable Product NPS Platform: Architected a shared Azure App Registration authorization pattern granting scoped JWT access across 10+ AB InBev apps. Built Product NPS end-to-end as a reusable Azure App Service backend paired with a React npm component distributed via internal Azure DevOps registry.',
-      'COVID Tracker: Deployed an employee health monitoring system during the pandemic, enabling HR to track vaccination status and provide rapid assistance to 5,000+ employees with automated notifications.',
-      'Platform Ownership: Maintained 8+ production applications at 99.5%+ uptime, managed Azure infrastructure, and implemented monitoring via Application Insights and Azure Monitor.',
-    ],
-    technologies: [
-      'React',
-      'Python',
-      'Flask',
-      'PostgreSQL',
-      'Azure App Service',
-      'Azure Functions',
-      'REST APIs',
-      'SAP BAPIs',
-      'Salesforce Connected Apps',
-      'Web Serial API',
     ],
   },
   {
@@ -414,24 +384,61 @@ export const workData = [
     location: 'New York, USA',
     period: 'Sep 2024 - May 2026',
     description:
-      'Engineering data platforms and analytics infrastructure for the Office of Assessment, Accreditation & Institutional Research (AAIR) at NYU Tandon. Built React/FastAPI applications serving 8,000+ students and 500+ faculty covering course feedback analysis, dashboard consolidation, and institutional research automation.',
+      'Built data platforms and analytics tools for the Office of Assessment, Accreditation & Institutional Research (AAIR) at NYU Tandon.',
     logo: '/images/nyu-logo.png',
     website: 'https://engineering.nyu.edu/about/assessment-and-institutional-research',
     achievements: [
-      'SeEval Course Feedback Platform (8,000+ users): Built with React, D3.js, FastAPI, and AWS (Amplify, EC2, RDS, Redis) serving 8,000+ NYU students and faculty. Designed a read-optimized backend with pre-aggregated target tables and Redis caching, holding sub-500ms p95 latency for sentiment analysis, historical course feedback, and comparative visualizations across large historical datasets.',
-      'Tableau Dashboards Directory (500+ faculty): Developed a React/FastAPI portal consumed by 500+ faculty with automated metadata extraction via Python Lambda functions calling Tableau REST APIs. Consolidated 100+ dashboards behind a three-layer navigation structure, reducing manual reporting maintenance by 60%.',
-      'Enterprise SSO Integration: Implemented Microsoft Entra ID authentication across both platforms, enabling seamless single sign-on for students and faculty.',
+      'SeEval Course Feedback Platform (8,000+ users): Built a course feedback platform for 8,000+ NYU students and faculty with React, D3.js, FastAPI, and AWS, covering sentiment analysis, historical course feedback, and comparative visualizations.',
+    ],
+    technologies: ['React', 'FastAPI', 'D3.js', 'AWS', 'Python', 'PostgreSQL'],
+  },
+  {
+    position: 'Solutions Architect',
+    company: 'AB InBev',
+    location: 'Bengaluru, India',
+    period: 'Jan 2023 - Jul 2024',
+    description:
+      'Led architecture for business-critical applications across Finance, Operations, and Employee Experience, on secure, scalable Azure solutions used across 5 global regions.',
+    logo: '/images/ab-inbev-logo.jpg',
+    website: 'https://www.ab-inbev.com',
+    achievements: [
+      'Financial Reconciliation Platform (150M+ daily records): Architected an event-driven platform processing 150M+ daily financial records for 7,000+ finance users across 5 regions, built on Azure Data Factory, Azure SQL, Event Grid, and Redis. Cut API latency 120x, from 2 minutes to under 1 second, saving about $600K a year.',
+      'KRIA NPS Platform: Built KRIA, a React/Flask PWA serving 50,000+ stakeholders across 800 teams. Raised the survey response rate from 30% to 70% and reached an 88 NPS, validated by Bain & Company.',
+      'Platform Standards: Drove adoption of Terraform infrastructure as code and a golden CI pipeline with automated security scanning across product teams.',
+    ],
+    technologies: [
+      'Azure (Data Factory, Event Grid, SQL, Key Vault, Entra)',
+      'Terraform',
+      'React',
+      'Flask',
+      'Python',
+      'Node.js',
+      'Redis',
+      'Azure DevOps',
+    ],
+  },
+  {
+    position: 'Software Development Engineer I',
+    company: 'AB InBev',
+    location: 'Bengaluru, India',
+    period: 'Jul 2021 - Dec 2022',
+    description:
+      'Built full-stack enterprise applications for sales operations and workforce management across Europe and India, and served as the team Security Champion.',
+    logo: '/images/ab-inbev-logo.jpg',
+    website: 'https://www.ab-inbev.com',
+    achievements: [
+      'Security Champion: Cut open security issues by 73% across 25+ applications.',
+      'Maven (2,000 sales reps, 10+ countries): Built an offline-first customer master data app for 2,000 sales reps across 10+ countries. Cut data turnaround from 3 days to under 1 day and raised first-time-right from 40% to 95%.',
+      'Hop-A-Seat (5,000 employees): Shipped a hybrid-work booking PWA with 100% adoption across 5,000 employees, replacing $120K a year in vendor licensing.',
     ],
     technologies: [
       'React',
-      'FastAPI',
-      'D3.js',
-      'AWS (Amplify, EC2, RDS, Lambda)',
-      'PostgreSQL',
-      'Redis',
-      'Tableau REST API',
-      'Microsoft Entra ID',
       'Python',
+      'Flask',
+      'PostgreSQL',
+      'Azure App Service',
+      'Azure Functions',
+      'PWAs',
     ],
   },
   {
